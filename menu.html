@@ -1102,7 +1102,7 @@ body {
             <a class="profile-menu-link" href='#' id="profile-menu-cpa-m10">M-10</a>
             <a class="profile-menu-link" href='#' id="profile-menu-cpa-m11">M-11</a>
             <a class="profile-menu-link" href='#' id="profile-menu-cpa-m12">M-12</a>
-            <a class="profile-menu-link" href='#' id="profile-menu-especialidades">ESP</a>
+            <a class="profile-menu-link" href='#' id="profile-menu-especial">ESP</a>
            
           </div>
         </div>
@@ -2553,11 +2553,11 @@ body {
 
 
 
-<div class="timeline" id="timeline-especialidades">
+<div class="timeline" id="timeline-especial">
           <div class="timeline-left">
             <div class="intro box">
               <div class="intro-title">
-                ESPECIALIDADES
+                SUPESPECIAL
                 
               </div>
               <div class="info">
@@ -2662,7 +2662,7 @@ body {
               </div>
               <div class="album-actions">
                 <div class="intro-title">
-                Supervisores ESPECIALIDADES
+                Supervisores ESPECIAL
                 
               </div>
                 
@@ -3196,9 +3196,20 @@ function atualizarSupervisor(timeline, equipe, supervisores) {
 }
 
 // Seletor para as timelines
-const timelineCPAM1 = document.querySelector("#timeline-cpa-m1");
-const timelineCPAM2 = document.querySelector("#timeline-cpa-m2");
-const timelineCPAM3 = document.querySelector("#timeline-cpa-m3");
+    const timelineCPAM1 = document.querySelector("#timeline-cpa-m1");
+    const timelineCPAM2 = document.querySelector("#timeline-cpa-m2");
+    const timelineCPAM3 = document.querySelector("#timeline-cpa-m3");
+    const timelineCPAM4 = document.querySelector("#timeline-cpa-m4");
+    const timelineCPAM5 = document.querySelector("#timeline-cpa-m5");
+    const timelineCPAM6 = document.querySelector("#timeline-cpa-m6");
+    const timelineCPAM7 = document.querySelector("#timeline-cpa-m7");
+    const timelineCPAM8 = document.querySelector("#timeline-cpa-m8");
+    const timelineCPAM9 = document.querySelector("#timeline-cpa-m9");
+    const timelineCPAM10 = document.querySelector("#timeline-cpa-m10");
+    const timelineCPAM11 = document.querySelector("#timeline-cpa-m11");
+    const timelineCPAM12 = document.querySelector("#timeline-cpa-m12");
+    const timelineESPECIAL = document.querySelector("#timeline-especial");
+    
 
 // Defina os objetos de supervisores para cada timeline
 const supervisoresCPAM1 = {
@@ -3214,7 +3225,15 @@ const supervisoresCPAM1 = {
     nome: "SUPERVISOR 1º SGT CACIQUE - CPA M1",
     imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
   },
-  // Adicione as demais equipes para CPA M1 aqui
+    "EQUIPE D": {
+    nome: "SUPERVISOR 1º SGT KAKAKA - CPA M1",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+    "EQUIPE E": {
+    nome: "SUPERVISOR 1º SGT PQPPP - CPA M1",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+  
 };
 
 const supervisoresCPAM2 = {
@@ -3230,7 +3249,15 @@ const supervisoresCPAM2 = {
     nome: "SUPERVISOR 1º SGT KAKAKA - CPA M2",
     imagem: "URL_DA_IMAGEM_PARA_EQUIPE_C_CPA_M2"
   },
-  // Adicione as demais equipes para CPA M2 aqui
+      "EQUIPE D": {
+    nome: "SUPERVISOR 1º SGT KAKAKA - CPA M2",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+    "EQUIPE E": {
+    nome: "SUPERVISOR 1º SGT PQPPP - CPA M2",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+  
 };
 
 const supervisoresCPAM3 = {
@@ -3246,23 +3273,283 @@ const supervisoresCPAM3 = {
     nome: "SUPERVISOR 1º SGT GOIABA - CPA M3",
     imagem: "URL_DA_IMAGEM_PARA_EQUIPE_C_CPA_M3"
   },
-  // Adicione as demais equipes para CPA M3 aqui
+      "EQUIPE D": {
+    nome: "SUPERVISOR 1º SGT KAKAKA - CPA M3",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+    "EQUIPE E": {
+    nome: "SUPERVISOR 1º SGT PQPPP - CPA M3",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+  
+
 };
 
+    const supervisoresCPAM4 = {
+  "EQUIPE A": {
+    nome: "SUPERVISOR 1º SGT HAHAH - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_A_CPA_M3"
+  },
+  "EQUIPE B": {
+    nome: "SUPERVISOR 1º SGT PASTEL - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_B_CPA_M3"
+  },
+  "EQUIPE C": {
+    nome: "SUPERVISOR 1º SGT GOIABA - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_C_CPA_M3"
+  },
+      "EQUIPE D": {
+    nome: "SUPERVISOR 1º SGT KAKAKA - CPA M3",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+    "EQUIPE E": {
+    nome: "SUPERVISOR 1º SGT PQPPP - CPA M3",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+  
+
+};
+
+    const supervisoresCPAM5 = {
+  "EQUIPE A": {
+    nome: "SUPERVISOR 1º SGT HAHAH - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_A_CPA_M3"
+  },
+  "EQUIPE B": {
+    nome: "SUPERVISOR 1º SGT PASTEL - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_B_CPA_M3"
+  },
+  "EQUIPE C": {
+    nome: "SUPERVISOR 1º SGT GOIABA - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_C_CPA_M3"
+  },
+      "EQUIPE D": {
+    nome: "SUPERVISOR 1º SGT KAKAKA - CPA M3",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+    "EQUIPE E": {
+    nome: "SUPERVISOR 1º SGT PQPPP - CPA M3",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+  
+
+};
+
+    const supervisoresCPAM6 = {
+  "EQUIPE A": {
+    nome: "SUPERVISOR 1º SGT HAHAH - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_A_CPA_M3"
+  },
+  "EQUIPE B": {
+    nome: "SUPERVISOR 1º SGT PASTEL - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_B_CPA_M3"
+  },
+  "EQUIPE C": {
+    nome: "SUPERVISOR 1º SGT GOIABA - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_C_CPA_M3"
+  },
+      "EQUIPE D": {
+    nome: "SUPERVISOR 1º SGT KAKAKA - CPA M3",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+    "EQUIPE E": {
+    nome: "SUPERVISOR 1º SGT PQPPP - CPA M3",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+  
+
+};
+
+    const supervisoresCPAM7 = {
+  "EQUIPE A": {
+    nome: "SUPERVISOR 1º SGT HAHAH - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_A_CPA_M3"
+  },
+  "EQUIPE B": {
+    nome: "SUPERVISOR 1º SGT PASTEL - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_B_CPA_M3"
+  },
+  "EQUIPE C": {
+    nome: "SUPERVISOR 1º SGT GOIABA - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_C_CPA_M3"
+  },
+      "EQUIPE D": {
+    nome: "SUPERVISOR 1º SGT KAKAKA - CPA M3",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+    "EQUIPE E": {
+    nome: "SUPERVISOR 1º SGT PQPPP - CPA M3",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+  
+
+};
+
+    const supervisoresCPAM8 = {
+  "EQUIPE A": {
+    nome: "SUPERVISOR 1º SGT HAHAH - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_A_CPA_M3"
+  },
+  "EQUIPE B": {
+    nome: "SUPERVISOR 1º SGT PASTEL - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_B_CPA_M3"
+  },
+  "EQUIPE C": {
+    nome: "SUPERVISOR 1º SGT GOIABA - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_C_CPA_M3"
+  },
+      "EQUIPE D": {
+    nome: "SUPERVISOR 1º SGT KAKAKA - CPA M3",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+    "EQUIPE E": {
+    nome: "SUPERVISOR 1º SGT PQPPP - CPA M3",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+  
+
+};
+
+    const supervisoresCPAM9 = {
+  "EQUIPE A": {
+    nome: "SUPERVISOR 1º SGT HAHAH - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_A_CPA_M3"
+  },
+  "EQUIPE B": {
+    nome: "SUPERVISOR 1º SGT PASTEL - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_B_CPA_M3"
+  },
+  "EQUIPE C": {
+    nome: "SUPERVISOR 1º SGT GOIABA - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_C_CPA_M3"
+  },
+      "EQUIPE D": {
+    nome: "SUPERVISOR 1º SGT KAKAKA - CPA M3",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+    "EQUIPE E": {
+    nome: "SUPERVISOR 1º SGT PQPPP - CPA M3",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+  
+
+};
+
+    const supervisoresCPAM10 = {
+  "EQUIPE A": {
+    nome: "SUPERVISOR 1º SGT HAHAH - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_A_CPA_M3"
+  },
+  "EQUIPE B": {
+    nome: "SUPERVISOR 1º SGT PASTEL - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_B_CPA_M3"
+  },
+  "EQUIPE C": {
+    nome: "SUPERVISOR 1º SGT GOIABA - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_C_CPA_M3"
+  },
+      "EQUIPE D": {
+    nome: "SUPERVISOR 1º SGT KAKAKA - CPA M3",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+    "EQUIPE E": {
+    nome: "SUPERVISOR 1º SGT PQPPP - CPA M3",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+  
+
+};
+
+
+    const supervisoresCPAM11 = {
+  "EQUIPE A": {
+    nome: "SUPERVISOR 1º SGT HAHAH - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_A_CPA_M3"
+  },
+  "EQUIPE B": {
+    nome: "SUPERVISOR 1º SGT PASTEL - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_B_CPA_M3"
+  },
+  "EQUIPE C": {
+    nome: "SUPERVISOR 1º SGT GOIABA - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_C_CPA_M3"
+  },
+      "EQUIPE D": {
+    nome: "SUPERVISOR 1º SGT KAKAKA - CPA M3",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+    "EQUIPE E": {
+    nome: "SUPERVISOR 1º SGT PQPPP - CPA M3",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+  
+
+};
+
+
+    const supervisoresCPAM12 = {
+  "EQUIPE A": {
+    nome: "SUPERVISOR 1º SGT HAHAH - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_A_CPA_M3"
+  },
+  "EQUIPE B": {
+    nome: "SUPERVISOR 1º SGT PASTEL - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_B_CPA_M3"
+  },
+  "EQUIPE C": {
+    nome: "SUPERVISOR 1º SGT GOIABA - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_C_CPA_M3"
+  },
+      "EQUIPE D": {
+    nome: "SUPERVISOR 1º SGT KAKAKA - CPA M3",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+    "EQUIPE E": {
+    nome: "SUPERVISOR 1º SGT PQPPP - CPA M3",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+  
+
+};
+
+    const supervisoresESPECIAL = {
+  "EQUIPE A": {
+    nome: "SUPERVISOR 1º SGT HAHAH - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_A_CPA_M3"
+  },
+  "EQUIPE B": {
+    nome: "SUPERVISOR 1º SGT PASTEL - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_B_CPA_M3"
+  },
+  "EQUIPE C": {
+    nome: "SUPERVISOR 1º SGT GOIABA - CPA M3",
+    imagem: "URL_DA_IMAGEM_PARA_EQUIPE_C_CPA_M3"
+  },
+      "EQUIPE D": {
+    nome: "SUPERVISOR 1º SGT KAKAKA - CPA M3",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+    "EQUIPE E": {
+    nome: "SUPERVISOR 1º SGT PQPPP - CPA M3",
+    imagem: "https://upload.wikimedia.org/wikipedia/commons/4/43/Paul_Circle.png"
+  },
+  
+
+};
 // Chamada para as timelines com os objetos de supervisores relevantes
     atualizarSupervisor(timelineCPAM1, "EQUIPE A", supervisoresCPAM1);
     atualizarSupervisor(timelineCPAM2, "EQUIPE A", supervisoresCPAM2);
     atualizarSupervisor(timelineCPAM3, "EQUIPE A", supervisoresCPAM3);
-    atualizarSupervisor(timelineCPAM3, "EQUIPE A", supervisoresCPAM4);
-    atualizarSupervisor(timelineCPAM3, "EQUIPE A", supervisoresCPAM5);
-    atualizarSupervisor(timelineCPAM3, "EQUIPE A", supervisoresCPAM6);
-    atualizarSupervisor(timelineCPAM3, "EQUIPE A", supervisoresCPAM7);
-    atualizarSupervisor(timelineCPAM3, "EQUIPE A", supervisoresCPAM8);
-    atualizarSupervisor(timelineCPAM3, "EQUIPE A", supervisoresCPAM9);
-    atualizarSupervisor(timelineCPAM3, "EQUIPE A", supervisoresCPAM10);
-    atualizarSupervisor(timelineCPAM3, "EQUIPE A", supervisoresCPAM11);
-    atualizarSupervisor(timelineCPAM3, "EQUIPE A", supervisoresCPAM12);
-    atualizarSupervisor(timelineCPAM3, "EQUIPE A", supervisoresCHOQUE);
+    atualizarSupervisor(timelineCPAM4, "EQUIPE A", supervisoresCPAM4);
+    atualizarSupervisor(timelineCPAM5, "EQUIPE A", supervisoresCPAM5);
+    atualizarSupervisor(timelineCPAM6, "EQUIPE A", supervisoresCPAM6);
+    atualizarSupervisor(timelineCPAM7, "EQUIPE A", supervisoresCPAM7);
+    atualizarSupervisor(timelineCPAM8, "EQUIPE A", supervisoresCPAM8);
+    atualizarSupervisor(timelineCPAM9, "EQUIPE A", supervisoresCPAM9);
+    atualizarSupervisor(timelineCPAM10, "EQUIPE A", supervisoresCPAM10);
+    atualizarSupervisor(timelineCPAM11, "EQUIPE A", supervisoresCPAM11);
+    atualizarSupervisor(timelineCPAM12, "EQUIPE A", supervisoresCPAM12);
+    atualizarSupervisor(timelineESPECIAL, "EQUIPE A", supervisoresESPECIAL);
     
 
 </script>
