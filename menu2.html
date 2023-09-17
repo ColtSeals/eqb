@@ -1082,53 +1082,18 @@ body {
     </ul>
 </li>
 
-<style>
-  .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-
-  .modal-content {
-    background-color: white;
-    width: 300px;
-    margin: 20% auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-  }
-
-  .close {
-    float: right;
-    cursor: pointer;
-    font-size: 20px;
-  }
-
-  #inputData {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-</style>
-
-
-
 <div id="myModal" class="modal">
   <div class="modal-content">
-    <span class="close">&times;</span>
+    <span class="close" id="closeModal">&times;</span>
     <input type="text" id="inputData" placeholder="Digite os dados">
     <button id="pesquisarButton">Pesquisar</button>
   </div>
 </div>
 
-            
-            
 <script>
   var modal = document.getElementById("myModal");
   var btn = document.getElementById("consultaID");
-  var span = document.getElementsByClassName("close")[0];
+  var span = document.getElementById("closeModal");
 
   btn.onclick = function () {
     modal.style.display = "block";
