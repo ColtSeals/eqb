@@ -126,6 +126,46 @@ body{
         </div>
     </div>
 
+    <!-- Rodapé -->
+<div id="rodape">
+    Desenvolvido pelo CB-PM Luanque Equipe Bravo ⚡- <span id="hora"></span>
+</div>
+
+    <script>
+function atualizarHora() {
+    var horaAtual = new Date();
+    var hora = horaAtual.getHours();
+    var minutos = horaAtual.getMinutes();
+    var segundos = horaAtual.getSeconds();
+
+    var horaFormatada = hora + ":" + (minutos < 10 ? "0" : "") + minutos + ":" + (segundos < 10 ? "0" : "") + segundos;
+
+    document.getElementById("hora").textContent = horaFormatada;
+}
+
+setInterval(atualizarHora, 1000); // Atualizar a cada segundo
+
+// Função para fazer o texto rolante
+function textoRolante() {
+    var rodape = document.getElementById("rodape");
+    var texto = rodape.innerHTML;
+    var charIndex = 0;
+
+    function mostrarTexto() {
+        if (charIndex < texto.length) {
+            rodape.innerHTML = texto.substring(charIndex);
+            charIndex++;
+            setTimeout(mostrarTexto, 100); // Velocidade de rolagem
+        }
+    }
+
+    mostrarTexto();
+}
+
+textoRolante(); // Iniciar o texto rolante
+</script>
+
+
     <script src="usuarios.js"></script>
     <script>
         function validateLogin() {
