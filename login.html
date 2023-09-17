@@ -107,6 +107,37 @@ body{
 .btn-submit:hover{
     background-color: rgba(255, 255, 255, 1);
 }
+
+#rodape {
+    background: linear-gradient(to right, #000000, #333333); /* Gradiente preto */
+    color: white; /* Cor do texto */
+    text-align: center; /* Texto centralizado */
+    padding: 20px 0; /* Espaçamento interno superior e inferior */
+    position: relative; /* Para posicionar a linha vermelha */
+}
+
+.faixa-preta {
+    background: linear-gradient(to right, #000000, #333333); /* Gradiente preto */
+    height: 20px; /* Altura da faixa preta em degradê */
+}
+
+.linha-vermelha {
+    background: linear-gradient(to right, #ff0000, #cc0000); /* Gradiente vermelho */
+    height: 3px; /* Altura da linha vermelha em degradê */
+    position: absolute; /* Posicionamento absoluto para a linha vermelha */
+    bottom: 0; /* Alinhar a linha vermelha na parte inferior */
+    left: 0; /* Alinhar a linha vermelha à esquerda */
+    width: 100%; /* Largura total da linha vermelha */
+}
+
+.texto-rodape {
+    font-size: 14px; /* Tamanho da fonte */
+    margin-top: 30px; /* Espaço entre a faixa e o texto */
+}
+
+
+
+        
     </style>
 </head>
 <body>
@@ -126,10 +157,11 @@ body{
         </div>
     </div>
 
-    <!-- Rodapé -->
 <div id="rodape">
-    Desenvolvido pelo CB-PM Luanque Equipe Bravo ⚡- 2023</span>
+    <div class="faixa"></div>
+    <div class="texto-rodape">Desenvolvido pelo CB-PM Equipe "Bravo" do COPOM⚡ - 2023</div>
 </div>
+
 
 
 
