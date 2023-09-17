@@ -1,3 +1,14 @@
+<script>
+    // Verificar se o usuário está autenticado (por exemplo, usando um token)
+    var isAuthenticated = /* Verifique a autenticação aqui */;
+
+    if (!isAuthenticated) {
+        // Redirecionar para a página de login se não estiver autenticado
+        window.location.href = "index.html";
+    }
+</script>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -941,18 +952,7 @@ body {
 </head>
 
 <body>
-
-<script>
-    // Verificar se o usuário está autenticado (por exemplo, usando um token)
-    var isAuthenticated = /* Verifique a autenticação aqui */;
-
-    if (!isAuthenticated) {
-        // Redirecionar para a página de login se não estiver autenticado
-        window.location.href = "index.html";
-    }
-</script>
-
-  
+ 
   <!-- partial:index.partial.html -->
   <div class="container" x-data="{ rightSide: false, leftSide: false }">
     <div class="left-side" :class="{'active' : leftSide}">
