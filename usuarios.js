@@ -277,9 +277,67 @@ var users = [
 
     // EQUIPE E
 
+    { username: "142307", password: "142307" },  // SGT-PM CESAR
+  
+    { username: "148600", password: "148600" },  // SGT-PM ALINE JORGE
 
+    { username: "960770", password: "960770" },  // SGT-PM DIAS
 
-    
+    { username: "964179", password: "964179" },  // SGT-PM FIALHO
+
+    { username: "111587", password: "111587" },  // SGT-PM ROBSON
+
+    { username: "921209", password: "921209" },  // SGT-PM NEANDRO
+
+    { username: "113597", password: "113597" },  // SGT-PM A. CARLOS
+
+    { username: "966810", password: "966810" },  // SGT-PM RENATO
+
+    { username: "116511", password: "116511" },  // SGT-PM CARVALHO
+
+    { username: "119600", password: "119600" },  // SGT-PM FABIO SILVA
+
+    { username: "976126", password: "976126" },  // SGT-PM GUEDES
+
+    { username: "119731", password: "119731" },  // SGT-PM ANDRE TAVARES
+
+    { username: "881000", password: "881000" },  // SGT-PM FLAVIO
+
+    { username: "108097", password: "108097" },  // SGT-PM LOPES
+
+    { username: "107524", password: "107524" },  // SGT-PM FERNANDO
+  
+    { username: "963407", password: "963407" },  // SGT-PM ABREU
+  
+    { username: "101493", password: "101493" },  // SUB-PM A. MARCOS
+
+        
+    { username: "111358", password: "111358" },  // CB-PM DIMITROV
+          
+    { username: "982204", password: "982204" },  // CB-PM ADRIANA MELO
+          
+    { username: "967150", password: "967150" },  // CB-PM CRISTIANO
+          
+    { username: "111587", password: "111587" },  // CB-PM ROBSON
+          
+    { username: "114605", password: "114605" },  // CB-PM DE LARA
+          
+    { username: "980152", password: "980152" },  // CB-PM BESSA
+          
+    { username: "104032", password: "104032" },  // CB-PM FABIO ROBERTO
+          
+    { username: "142729", password: "142729" },  // CB-PM GALVÃO
+          
+    { username: "162246", password: "162246" },  // CB-PM FERRARI
+          
+    { username: "146456", password: "146456" },  // CB-PM THAMIRIS
+          
+    { username: "951982", password: "951982" },  // CB-PM ROSELI GONÇALVES
+          
+    { username: "106954", password: "106954" },  // CB-PM ANA KELLY
+  
+
+  
     // OFICIAIS
 
     { username: "891454", password: "891454" },  // CEL-PM LUCENA
