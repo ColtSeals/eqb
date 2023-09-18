@@ -3172,16 +3172,20 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
 
 
    <div class="info-item">
-        <i class="fa-solid fa-phone" style="margin-right: 10px;"></i>
+        <i class="fa-solid fa-phone" style="margin-right: 5px;"></i>
         <div class="department">SALA DE SITUAÇÃO</div>
-        <div class="contact-numbers">3327-7029 | 3327-7030</div>
+        <div class="user-status"><a href="#">3327-7029 | 3327-7030</a></div>
     </div>
 
-   <div class="info-item">
-        <i class="fa-solid fa-phone" style="margin-right: 10px;"></i>
+
+    <div class="info-item">
+        <i class="fa-solid fa-phone" style="margin-right: 5px;"></i>
         <div class="department">SALA DE IMPRENSA</div>
-        <div class="contact-numbers">3327-7063 | 3327-7064</div>
+        <div class="user-status"><a href="#">3327-7063 | 3327-7064</a></div>
     </div>
+
+
+
 
 
 
@@ -3580,22 +3584,25 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-        const searchInput = document.getElementById("contact-search");
-        const infoItems = document.querySelectorAll(".info-item");
+    const searchInput = document.getElementById("contact-search");
+    const infoItems = document.querySelectorAll(".info-item");
 
-        searchInput.addEventListener("input", function () {
-            const searchTerm = searchInput.value.toLowerCase();
+    searchInput.addEventListener("input", function () {
+        const searchTerm = searchInput.value.toLowerCase();
 
-            infoItems.forEach(function (item) {
-                const text = item.textContent.toLowerCase();
-                if (text.includes(searchTerm)) {
-                    item.style.display = "block";
-                } else {
-                    item.style.display = "none";
-                }
-            });
+        infoItems.forEach(function (item) {
+            const department = item.querySelector(".department").textContent.toLowerCase();
+            const contactNumbers = item.querySelector(".user-status a").textContent.toLowerCase();
+
+            if (department.includes(searchTerm) || contactNumbers.includes(searchTerm)) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
         });
     });
+});
+
 </script>
 	
   <!-- partial -->
