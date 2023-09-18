@@ -3050,15 +3050,20 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
 
 <style>	      
 /* Estilize o ícone e o texto de logout */
-#logout-icon {
-  transition: transform 0.3s ease, color 0.3s ease;
+#logout-link {
+  position: relative;
   cursor: pointer;
 }
 
+#logout-icon {
+  font-size: 24px; /* Defina o tamanho inicial do ícone */
+  color: black; /* Defina a cor inicial do ícone */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
 #logout-text {
-  display: none;
   position: absolute;
-  top: -20px;
+  top: 100%; /* Posicione abaixo do ícone */
   left: 50%;
   transform: translateX(-50%);
   background-color: #333;
@@ -3071,24 +3076,25 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
 }
 
 /* Quando o mouse está sobre o ícone */
-#logout-icon:hover {
-  transform: scale(1.1); /* Exemplo de animação de escala */
-  color: white; /* Mude a cor para branco */
+#logout-link:hover #logout-icon {
+  transform: scale(1.1); /* Aumente o tamanho do ícone */
+  color: white; /* Mude a cor do ícone para branco */
 }
 
 /* Quando o mouse está sobre o ícone, mostre o texto de logout */
-#logout-icon:hover + #logout-text {
-  display: inline-block;
+#logout-link:hover #logout-text {
   opacity: 1;
 }
 
-</style>        
+</style>    
+	      
 <span id="logout-link" class="account-user">
   COPOM SUP
   <img src="https://raw.githubusercontent.com/ColtSeals/VDM/main/copomeqpb2.png" alt="" class="account-profile">
   <i class="fa-solid fa-right-from-bracket" id="logout-icon"></i>
   <span id="logout-text">Clique para SAIR!</span>
 </span>
+
 
 
 
