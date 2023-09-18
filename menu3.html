@@ -1484,24 +1484,32 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
                 </div>
               </div>
             </div>
-            <div class="calendar-month block"> <!-- CALENDAR MONTH (RIGHT-CONTAINER) -->
-				<div class="arrow-btn-container">
-					
-				</div>
-				<div id='calendar'></div> <!-- New calendar container -->
-			</div> <!-- end calendar-month block -->
-			
-			<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
-			<script>
-				document.addEventListener('DOMContentLoaded', function() {
-					var calendarEl = document.getElementById('calendar');
-					var calendar = new FullCalendar.Calendar(calendarEl, {
-						initialView: 'dayGridMonth',
-						locale: 'pt-BR'
-					});
-					calendar.render();
-				});
-			</script>
+		<div class="calendar-month block">
+			  <div id='calendar'></div>
+		</div>
+
+		  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/locales/pt-br.js'></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      locale: 'pt-br', // Defina o local desejado
+      events: [
+        {
+          title: 'Winter Wonderland',
+          start: '2023-01-01T07:00:00',
+          end: '2023-01-01T12:00:00',
+        },
+        // Outros eventos aqui...
+      ],
+    });
+    calendar.render();
+  });
+</script>
+
+
             <div class="pages box">
               <div class="intro-title">
                 Your pages
