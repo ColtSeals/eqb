@@ -3119,19 +3119,22 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
           </div>
         </div>
       </div>
-      <div class="side-wrapper contacts">
-        <div class="side-title">TELEFONES ÚTEIS</div>
+<div class="side-wrapper contacts">
+  <div class="side-title">TELEFONES ÚTEIS</div>
+
+  
+<div class="info-item">
+    <i class="fa-solid fa-phone" style="margin-right: 10px;"></i> 
+    SALA DE SITUAÇÃO
+  </div>
+  
+  <div class="info-item">
+    <div class="user-status"></div>   
+    <a href="#">3327-7029 | 3327-7030</a> 
+  </div>
 
 
-        <div class="info-item">
-                  <i class="fa-solid fa-phone" style="margin-right: 10px;"></i> 
-                  SALA DE SITUAÇÃO
-        </div>
-
-        <div class="info-item">
-                  
-               <div class="user-status"></div>   <a href="#">3327-7029 | 3327-7030</a> 
-        </div>
+  
         
         <div class="info-item">
                   <i class="fa-solid fa-phone" style="margin-right: 10px;"></i> 
@@ -3508,7 +3511,36 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
 
       </div>
       <div class="search-bar right-search">
-        <input type="text" placeholder="Search" />
+        <input type="text" id="search-input" placeholder="Search" />
+
+<script>
+  // A função de pesquisa é chamada sempre que o usuário digitar algo na barra de pesquisa
+document.getElementById('search-input').addEventListener('input', function() {
+  // Obtém o valor digitado na barra de pesquisa
+  var searchTerm = this.value.toLowerCase();
+
+  // Obtém todos os itens da lista de contatos
+  var contactItems = document.querySelectorAll('.info-item');
+
+  // Loop através de cada item da lista de contatos
+  contactItems.forEach(function(item) {
+    var contactName = item.textContent.toLowerCase();
+
+    // Verifica se o termo de pesquisa está presente no nome do contato
+    if (contactName.includes(searchTerm)) {
+      // Se o termo de pesquisa estiver presente, mostra o item
+      item.style.display = 'block';
+    } else {
+      // Caso contrário, oculta o item
+      item.style.display = 'none';
+    }
+  });
+});
+
+</script>      
+
+
+        
         <div class="search-bar-svgs">
           <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
             class="css-i6dzq1" viewBox="0 0 24 24">
