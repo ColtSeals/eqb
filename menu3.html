@@ -3174,22 +3174,38 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
 
 
 
-<div class="info-item">
-    <i class="fa-solid fa-phone"></i>
-    <div class="department">SALA DE IMPRENSA</div>
-    <div class="contact-numbers user-status">3327-7063 | 3327-7064</div>
-</div>
 
+
+
+<style>	      
+.info-item {
+    display: flex;
+    align-items: center; /* Alinha verticalmente os itens no centro */
+}
+
+.info {
+    display: flex;
+    flex-direction: column; /* Coloca os elementos em coluna */
+    margin-left: 10px; /* Adiciona um espaçamento à esquerda para separar o ícone e as informações */
+}
+
+.department {
+    font-weight: bold; /* Deixa o nome do departamento em negrito, se desejar */
+}
+
+</style>
+
+<div class="info-item">
+    <i class="fa-solid fa-phone" style="margin-right: 10px;"></i>
+    <div class="info">
+        <div class="department">SALA DE IMPRENSA</div>
+        <div class="contact-numbers">3327-7063 | 3327-7064</div>
+    </div>
+</div>
 
 	      
 
 
-
-   <div class="info-item">
-        <i class="fa-solid fa-phone" style="margin-right: 10px;"></i>
-        <div class="department">SALA DE IMPRENSA</div>
-        <div class="contact-numbers">3327-7063 | 3327-7064</div>
-    </div>
 
 
 
