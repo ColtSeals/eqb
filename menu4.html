@@ -3038,12 +3038,67 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
             <path d="M22 6l-10 7L2 6" />
           </svg>
         </button>
-        <button class="account-button">
-          <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
-            class="css-i6dzq1" viewBox="0 0 24 24">
-            <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" />
-          </svg>
-        </button>
+       
+        
+        
+        <style>
+/* Estilos para o botão de alternância */
+.toggle-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+/* Estilos para o ícone no modo claro */
+.toggle-button.light-mode .toggle-icon {
+    stroke: #000000; /* Cor do ícone no modo claro */
+}
+
+/* Estilos para o ícone no modo escuro (padrão) */
+.toggle-icon {
+    stroke: #ffffff; /* Cor do ícone no modo escuro (padrão) */
+}
+
+        </style>  
+        
+        
+        <button class="toggle-button" id="mode-toggle">
+    <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
+        class="toggle-icon" viewBox="0 0 24 24">
+        <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" />
+    </svg>
+</button>
+
+<script>
+const modeToggle = document.getElementById("mode-toggle");
+const body = document.body;
+
+// Verifique o modo atual e atualize o botão
+function updateMode() {
+    if (body.classList.contains("light-mode")) {
+        body.classList.remove("light-mode");
+    } else {
+        body.classList.add("light-mode");
+    }
+}
+
+// Alternar entre os modos claro e escuro quando o botão for clicado
+modeToggle.addEventListener("click", function () {
+    updateMode();
+});
+
+// Atualizar o modo quando a página for carregada
+window.addEventListener("load", function () {
+    updateMode();
+});
+</script>
+        
        
         
         
