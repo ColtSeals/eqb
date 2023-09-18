@@ -10,11 +10,17 @@
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: black;
+body {
+    background-image: url('bandeira-login.png'); /* URL da sua imagem de fundo */
+    background-size: cover; /* Dimensionar para cobrir */
+    background-position: center; /* Centralizar a imagem */
     font-family: sans-serif;
     color: white;
 }
+
+
+
+        
 .container{
     display: flex;
     justify-content:center ;
@@ -107,43 +113,81 @@ body{
 .btn-submit:hover{
     background-color: rgba(255, 255, 255, 1);
 }
+
+#rodape {
+    background-image: linear-gradient(to right, #000000, #333333); /* Gradiente preto */
+    color: white; /* Cor do texto */
+    text-align: center; /* Texto centralizado */
+    padding: 20px 0; /* Espaçamento interno superior e inferior */
+    position: relative; /* Para posicionar a linha vermelha */
+}
+
+.faixa-preta {
+    background: linear-gradient(to right, #000000, #333333); /* Gradiente preto */
+    height: 20px; /* Altura da faixa preta em degradê */
+}
+
+.linha-vermelha {
+    background-image: linear-gradient(to right, #ff0000, #cc0000); /* Gradiente vermelho */
+    height: 3px; /* Altura da linha vermelha em degradê */
+    width: 100%; /* Largura total da linha vermelha */
+    position: absolute; /* Posicionamento absoluto para a linha vermelha */
+    bottom: 0; /* Alinhar a linha vermelha na parte inferior */
+    left: 0; /* Alinhar a linha vermelha à esquerda */
+}
+
+.texto-rodape {
+    font-size: 14px; /* Tamanho da fonte */
+    margin-top: 10px; /* Espaço entre a faixa e o texto */
+}
+
+
+
+        
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="circle1"></div>
-        <div class="circle2"></div>
         <div class="form-wrapper">
-            <h1>Login Here</h1>
+
+            <h1><img src="https://raw.githubusercontent.com/ColtSeals/VDM/gh-pages/LOGIN.png" alt="Logo" style="width: 150px; height: auto;"></h1>
             <form action="#" id="login-form">
-                <label class="label" for="Username">Username</label>
-                <input class="input-form" type="text" id="username-input" placeholder="Email or Phone" required> 
+                <label class="label" for="Username">Usuário</label>
+                <input class="input-form" type="text" id="username-input" placeholder="Seu login" required> 
                 
-                <label class="label" for="Password">Password</label>
-                <input class="input-form" type="password" id="password-input" placeholder="Password" required>
+                <label class="label" for="Password">Senha</label>
+                <input class="input-form" type="password" id="password-input" placeholder="Sua Senha" required>
             </form>
-            <a href="#">Forgot Password?</a>
-            <button type="button" class="btn-submit" onclick="validateLogin()">Submit</button>
+            <a href="#">Solicite seu acesso!</a>
+            <button type="button" class="btn-submit" onclick="validateLogin()">LOGIN</button>
         </div>
     </div>
 
+<div id="rodape">
+    <div class="faixa"></div>
+    <div class="texto-rodape">Desenvolvido pelo CB-PM Luanque - Equipe "Bravo" do COPOM⚡ - 2023</div>
+</div>
+
+
+
+
     <script src="usuarios.js"></script>
     <script>
-        function validateLogin() {
-            var usernameInput = document.getElementById("username-input").value;
-            var passwordInput = document.getElementById("password-input").value;
-            
-            // Verificar se o usuário está na lista e a senha está correta
-            var isAuthenticated = users.some(function(user) {
-                return user.username === usernameInput && user.password === passwordInput;
-            });
-            
-            if (isAuthenticated) {
-                // Redirecionar para a página do menu se autenticado
-                window.location.href = "menu.html";
-            } else {
-                alert("Credenciais inválidas. Tente novamente.");
-            }
+        // Função para obter parâmetros da URL
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Obter o nome de usuário da URL
+        var username = getUrlParameter('username');
+        
+        // Exibir o nome de usuário no elemento HTML com o id "user-display"
+        var userDisplay = document.getElementById("user-display");
+        if (userDisplay && username) {
+            userDisplay.textContent = username;
         }
     </script>
 </body>
