@@ -3088,50 +3088,7 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
   opacity: 1;
 }
 
-
-/* Estilos para o tema padrão do site */
-body {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-/* Estilos para o tema dark */
-body.dark-theme {
-    background-color: #000000;
-    color: #ffffff;
-}
-
-/* Estilos para o tema light */
-body.light-theme {
-    background-color: #f4f4f4;
-    color: #000000;
-}
-	
 </style>    
-
-
-<button id="themeToggle">
-        <i class="fa-solid fa-circle-half-stroke"></i> Alterar Tema
-</button>
-
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const themeToggle = document.getElementById("themeToggle");
-    const body = document.body;
-
-    themeToggle.addEventListener("click", function () {
-        if (body.classList.contains("dark-theme")) {
-            body.classList.remove("dark-theme");
-            body.classList.add("light-theme");
-        } else if (body.classList.contains("light-theme")) {
-            body.classList.remove("light-theme");
-        } else {
-            body.classList.add("dark-theme");
-        }
-    });
-});
-</script>	      
 	      
 <span id="logout-link" class="account-user">
   COPOM SUP
@@ -3215,20 +3172,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
    <div class="info-item">
-        <i class="fa-solid fa-phone" style="margin-right: 5px;"></i>
+        <i class="fa-solid fa-phone" style="margin-right: 10px;"></i>
         <div class="department">SALA DE SITUAÇÃO</div>
-        <div class="user-status"><a href="#">3327-7029 | 3327-7030</a></div>
+        <div class="contact-numbers">3327-7029 | 3327-7030</div>
     </div>
 
-
-    <div class="info-item">
-        <i class="fa-solid fa-phone" style="margin-right: 5px;"></i>
+   <div class="info-item">
+        <i class="fa-solid fa-phone" style="margin-right: 10px;"></i>
         <div class="department">SALA DE IMPRENSA</div>
-        <div class="user-status"><a href="#">3327-7063 | 3327-7064</a></div>
+        <div class="contact-numbers">3327-7063 | 3327-7064</div>
     </div>
-
-
-
 
 
 
@@ -3627,25 +3580,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <script>
     document.addEventListener("DOMContentLoaded", function () {
-    const searchInput = document.getElementById("contact-search");
-    const infoItems = document.querySelectorAll(".info-item");
+        const searchInput = document.getElementById("contact-search");
+        const infoItems = document.querySelectorAll(".info-item");
 
-    searchInput.addEventListener("input", function () {
-        const searchTerm = searchInput.value.toLowerCase();
+        searchInput.addEventListener("input", function () {
+            const searchTerm = searchInput.value.toLowerCase();
 
-        infoItems.forEach(function (item) {
-            const department = item.querySelector(".department").textContent.toLowerCase();
-            const contactNumbers = item.querySelector(".user-status a").textContent.toLowerCase();
-
-            if (department.includes(searchTerm) || contactNumbers.includes(searchTerm)) {
-                item.style.display = "block";
-            } else {
-                item.style.display = "none";
-            }
+            infoItems.forEach(function (item) {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
         });
     });
-});
-
 </script>
 	
   <!-- partial -->
