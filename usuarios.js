@@ -45,41 +45,41 @@ var users = [
 
     { username: "982516", password: "982516" },  // CB-PM
     
-    { username: "143761", password: "143761" },  // SGT-PM
+    { username: "143761", password: "143761" },  // CB-PM
 
-    { username: "103020", password: "103020" },  // SGT-PM
+    { username: "103020", password: "103020" },  // CB-PM
 
-    { username: "962211", password: "962211" },  // SGT-PM
+    { username: "962211", password: "962211" },  // CB-PM
     
-    { username: "109361", password: "109361" },  // SGT-PM
+    { username: "109361", password: "109361" },  // CB-PM
 
-    { username: "138709", password: "138709" },  // SGT-PM
+    { username: "138709", password: "138709" },  // CB-PM
 
-    { username: "122303", password: "122303" },  // SGT-PM
+    { username: "122303", password: "122303" },  // CB-PM
 
-    { username: "965958", password: "965958" },  // SGT-PM
+    { username: "965958", password: "965958" },  // CB-PM
 
-    { username: "967181", password: "967181" },  // SGT-PM
+    { username: "967181", password: "967181" },  // CB-PM
 
-    { username: "100742", password: "100742" },  // SGT-PM
+    { username: "100742", password: "100742" },  // CB-PM
 
-    { username: "109209", password: "109209" },  // SGT-PM
+    { username: "109209", password: "109209" },  // CB-PM
 
-    { username: "964243", password: "964243" },  // SGT-PM
+    { username: "964243", password: "964243" },  // CB-PM
 
-    { username: "976612", password: "976612" },  // SGT-PM
+    { username: "976612", password: "976612" },  // CB-PM
 
-    { username: "981134", password: "981134" },  // SGT-PM
+    { username: "981134", password: "981134" },  // CB-PM
 
-    { username: "135561", password: "135561" },  // SGT-PM
+    { username: "135561", password: "135561" },  // CB-PM
     
-    { username: "131790", password: "131790" },  // SGT-PM
+    { username: "131790", password: "131790" },  // CB-PM
 
-    { username: "117965", password: "117965" },  // SGT-PM
+    { username: "117965", password: "117965" },  // CB-PM
 
-    { username: "132097", password: "132097" },  // SGT-PM
+    { username: "132097", password: "132097" },  // CB-PM
 
-    { username: "132953", password: "132953" },  // SGT-PM
+    { username: "132953", password: "132953" },  // CB-PM
 
     
 // EQUIPE B
