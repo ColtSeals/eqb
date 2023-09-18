@@ -4,82 +4,81 @@ var users = [
 
 // EQUIPE A
 
-    { username: "107973", password: "107973" },  // SGT-PM 
 
-    { username: "128340", password: "128340" },  // SGT-PM 
 
-    { username: "100769", password: "100769" },  // SGT-PM 
+    { username: "128340", password: "128340" },  // SGT-PM ALMEIDA
 
-    { username: "132196", password: "132196" },  // SGT-PM 
+    { username: "100769", password: "100769" },  // SGT-PM SIMONE
 
-    { username: "106864", password: "106864" },  // SGT-PM 
+    { username: "132196", password: "132196" },  // SGT-PM TARCISO
 
-    { username: "973641", password: "973641" },  // SGT-PM 
+    { username: "106864", password: "106864" },  // SGT-PM MARICELI
 
-    { username: "100949", password: "100949" },  // SGT-PM 
+    { username: "973641", password: "973641" },  // SGT-PM RODNEI
 
-    { username: "132154", password: "132154" },  // SGT-PM 
+    { username: "100949", password: "100949" },  // SGT-PM ANA CLAUDIA
+
+    { username: "132154", password: "132154" },  // SGT-PM SAMUEL
   
-    { username: "122122", password: "122122" },  // SGT-PM 
+    { username: "122122", password: "122122" },  // SGT-PM DJALMA
 
-    { username: "119871", password: "119871" },  // SGT-PM 
+    { username: "119871", password: "119871" },  // SGT-PM RODRIGUES
 
-    { username: "124223", password: "124223" },  // SGT-PM 
+    { username: "124223", password: "124223" },  // SGT-PM VENTURA
 
-    { username: "112650", password: "112650" },  // SGT-PM 
+    { username: "112650", password: "112650" },  // SGT-PM GUERREIRO
 
-    { username: "122284", password: "122284" },  // SGT-PM 
+    { username: "122284", password: "122284" },  // SGT-PM FÓRIO
 
-    { username: "104307", password: "104307" },  // SGT-PM 
+    { username: "104307", password: "104307" },  // SGT-PM ELI EMERSON
 
-    { username: "127906", password: "127906" },  // SGT-PM 
+    { username: "127906", password: "127906" },  // SGT-PM ALVES
 
-    { username: "111058", password: "111058" },  // SGT-PM 
+    { username: "111058", password: "111058" },  // SGT-PM OLIVA
 
-    { username: "124565", password: "124565" },  // SGT-PM 
+    { username: "124565", password: "124565" },  // SGT-PM FÁBIO CAMARGO
 
-    { username: "885533", password: "885533" },  // SGT-PM 
-
-    { username: "160097", password: "160097" },  // SGT-PM 
+    { username: "885533", password: "885533" },  // SGT-PM JOEL
 
 
-    { username: "982516", password: "982516" },  // CB-PM
+
+    { username: "982516", password: "982516" },  // CB-PM SILVANA
     
-    { username: "143761", password: "143761" },  // CB-PM
+    { username: "143761", password: "143761" },  // CB-PM GUSTAVO
 
-    { username: "103020", password: "103020" },  // CB-PM
+    { username: "103020", password: "103020" },  // CB-PM CAVALCANTI
 
-    { username: "962211", password: "962211" },  // CB-PM
+    { username: "962211", password: "962211" },  // CB-PM RAQUEL
     
-    { username: "109361", password: "109361" },  // CB-PM
+    { username: "109361", password: "109361" },  // CB-PM YOSHIDA
 
-    { username: "138709", password: "138709" },  // CB-PM
+    { username: "138709", password: "138709" },  // CB-PM ISMAEL
 
-    { username: "122303", password: "122303" },  // CB-PM
+    { username: "122303", password: "122303" },  // CB-PM FRANCISCO
 
-    { username: "965958", password: "965958" },  // CB-PM
+    { username: "965958", password: "965958" },  // CB-PM NUBLING
 
-    { username: "967181", password: "967181" },  // CB-PM
+    { username: "967181", password: "967181" },  // CB-PM NILCÉRIA
 
-    { username: "100742", password: "100742" },  // CB-PM
+    { username: "100742", password: "100742" },  // CB-PM NICÉAS
 
-    { username: "109209", password: "109209" },  // CB-PM
+    { username: "109209", password: "109209" },  // CB-PM CASTILHO
 
-    { username: "964243", password: "964243" },  // CB-PM
+    { username: "964243", password: "964243" },  // CB-PM DEZORDI
 
-    { username: "976612", password: "976612" },  // CB-PM
+    { username: "976612", password: "976612" },  // CB-PM PRISCILA
 
-    { username: "981134", password: "981134" },  // CB-PM
+    { username: "981134", password: "981134" },  // CB-PM SANDRO
 
-    { username: "135561", password: "135561" },  // CB-PM
+    { username: "135561", password: "135561" },  // CB-PM CRISTÓVÃO
     
-    { username: "131790", password: "131790" },  // CB-PM
+    { username: "131790", password: "131790" },  // CB-PM ROBES
 
-    { username: "117965", password: "117965" },  // CB-PM
+    { username: "117965", password: "117965" },  // CB-PM ALESSANDRA
 
-    { username: "132097", password: "132097" },  // CB-PM
+    { username: "132097", password: "132097" },  // CB-PM LEONARDO
 
-    { username: "132953", password: "132953" },  // CB-PM
+    { username: "132953", password: "132953" },  // CB-PM NUNES
 
     
 // EQUIPE B
@@ -365,6 +364,8 @@ var users = [
     { username: "118374", password: "118374" },  // CAP-PM JORGE
     
     { username: "130150", password: "130150" },  // CAP-PM HANNA
+
+    { username: "107973", password: "107973" },  // CAP-PM HONORATO
 
     { username: "146919", password: "146919" },  // TEN-PM ARNONI
 
