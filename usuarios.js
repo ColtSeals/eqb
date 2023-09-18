@@ -204,8 +204,6 @@ var users = [
 
     { username: "155859", password: "155859." },
 
-    { username: "000000", password: "000000." },
-
     { username: "118687", password: "118687" },
 
     // Adicione mais usuários conforme necessário
