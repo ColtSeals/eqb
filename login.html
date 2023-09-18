@@ -172,24 +172,33 @@ body {
 
 
     <script src="usuarios.js"></script>
-    <script>
-        function validateLogin() {
-            var usernameInput = document.getElementById("username-input").value;
-            var passwordInput = document.getElementById("password-input").value;
-            
-            // Verificar se o usuário está na lista e a senha está correta
-            var isAuthenticated = users.some(function(user) {
-                return user.username === usernameInput && user.password === passwordInput;
-            });
-            
-            if (isAuthenticated) {
-                // Defina um cookie de autenticação
-                document.cookie = "authenticated=true; path=/"; // 'authenticated' é o nome do cookie
-                window.location.href = "menu.html";
-            } else {
-                alert("Credenciais inválidas. Tente novamente.");
-            }
+<script>
+    function validateLogin() {
+        var usernameInput = document.getElementById("username-input").value;
+        var passwordInput = document.getElementById("password-input").value;
+        
+        // Verificar se o usuário está na lista e a senha está correta
+        var isAuthenticated = users.some(function(user) {
+            return user.username === usernameInput && user.password === passwordInput;
+        });
+        
+        if (isAuthenticated) {
+            // Defina um cookie de autenticação
+            document.cookie = "authenticated=true; path=/"; // 'authenticated' é o nome do cookie
+            window.location.href = "menu.html";
+        } else {
+            alert("Credenciais inválidas. Tente novamente.");
         }
-    </script>
+    }
+
+    // Adicionar um evento de escuta de tecla ao campo de senha
+    document.getElementById("password-input").addEventListener("keyup", function(event) {
+        // Verificar se a tecla pressionada é a tecla Enter (código de tecla 13)
+        if (event.keyCode === 13) {
+            validateLogin(); // Chame a função validateLogin quando Enter for pressionado
+        }
+    });
+</script>
+
 </body>
 </html>
