@@ -3119,15 +3119,13 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
           </div>
         </div>
       </div>
-      <div class="side-wrapper contacts">
-        <div class="side-title">TELEFONES ÚTEIS</div>
-        
-      <div class="search-bar right-search">
-        <input type="text" placeholder="PESQUISAR TELEFONE" />
-        <div class="search-bar-svgs">
-          
-        </div>
-      </div>
+<div class="search-bar right-search">
+    <input type="text" id="phone-search" placeholder="Pesquisar telefone" onkeyup="searchPhone()" />
+    <div class="search-bar-svgs"></div>
+</div>
+
+<div class="side-wrapper contacts">
+    <div class="side-title">TELEFONES ÚTEIS</div>
 
         
 
@@ -3517,7 +3515,31 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
 
       </div>
 
+<script>
+    function searchPhone() {
+        // Obtém o valor digitado no campo de pesquisa
+        var input = document.getElementById("phone-search");
+        var filter = input.value.toLowerCase();
 
+        // Obtém todos os elementos da lista de telefones
+        var phoneList = document.querySelectorAll(".info-item");
+
+        // Itera sobre os elementos da lista e verifica se eles contêm o texto pesquisado
+        for (var i = 0; i < phoneList.length; i++) {
+            var phoneItem = phoneList[i];
+            var phoneText = phoneItem.textContent.toLowerCase();
+
+            // Se o texto pesquisado estiver presente no elemento, mostra-o, caso contrário, oculta-o
+            if (phoneText.indexOf(filter) > -1) {
+                phoneItem.style.display = "";
+            } else {
+                phoneItem.style.display = "none";
+            }
+        }
+    }
+</script>
+
+      
         
   <!-- adicionar algo -->
     </div>
