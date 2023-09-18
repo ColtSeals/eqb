@@ -124,85 +124,85 @@ var users = [
 
     { username: "122378", password: "122378." },
 
-    { username: "982516", password: "982516." },
+    { username: "982516", password: "982516" },
     
-    { username: "143761", password: "143761." },
+    { username: "143761", password: "143761" },
 
-    { username: "103020", password: "103020." },
+    { username: "103020", password: "103020" },
 
-    { username: "962211", password: "962211." },
+    { username: "962211", password: "962211" },
     
-    { username: "109361", password: "109361." },
+    { username: "109361", password: "109361" },
 
-    { username: "138709", password: "138709." },
+    { username: "138709", password: "138709" },
 
-    { username: "122303", password: "122303." },
+    { username: "122303", password: "122303" },
 
-    { username: "965958", password: "965958." },
+    { username: "965958", password: "965958" },
 
-    { username: "967181", password: "967181." },
+    { username: "967181", password: "967181" },
 
-    { username: "100742", password: "100742." },
+    { username: "100742", password: "100742" },
 
-    { username: "109209", password: "109209." },
+    { username: "109209", password: "109209" },
 
-    { username: "964243", password: "964243." },
+    { username: "964243", password: "964243" },
 
-    { username: "976612", password: "976612." },
+    { username: "976612", password: "976612" },
 
-    { username: "981134", password: "981134." },
+    { username: "981134", password: "981134" },
 
-    { username: "135561", password: "135561." },
+    { username: "135561", password: "135561" },
     
-    { username: "131790", password: "131790." },
+    { username: "131790", password: "131790" },
 
-    { username: "117965", password: "117965." },
+    { username: "117965", password: "117965" },
 
-    { username: "132097", password: "132097." },
+    { username: "132097", password: "132097" },
 
-    { username: "132953", password: "132953." },
+    { username: "132953", password: "132953" },
 
-    { username: "891454", password: "891454." },
+    { username: "891454", password: "891454" },
 
-    { username: "940669", password: "940669." },
+    { username: "940669", password: "940669" },
 
-    { username: "940762", password: "940762." },
+    { username: "940762", password: "940762" },
 
-    { username: "127836", password: "127836." },
+    { username: "127836", password: "127836" },
 
-    { username: "112766", password: "112766." },
+    { username: "112766", password: "112766" },
 
-    { username: "100394", password: "100394." },
+    { username: "100394", password: "100394" },
 
-    { username: "104842", password: "104842." },
+    { username: "104842", password: "104842" },
 
-    { username: "127841", password: "127841." },
+    { username: "127841", password: "127841" },
 
-    { username: "108741", password: "108741." },
+    { username: "108741", password: "108741" },
 
-    { username: "121969", password: "121969." },
+    { username: "121969", password: "121969" },
 
-    { username: "127729", password: "127729." },
+    { username: "127729", password: "127729" },
 
-    { username: "138879", password: "138879." },
+    { username: "138879", password: "138879" },
 
-    { username: "138881", password: "138881." },
+    { username: "138881", password: "138881" },
 
-    { username: "146920", password: "146920." },
+    { username: "146920", password: "146920" },
 
-    { username: "135331", password: "135331." },
+    { username: "135331", password: "135331" },
 
-    { username: "130758", password: "130758." },
+    { username: "130758", password: "130758" },
 
-    { username: "132374", password: "132374." },
+    { username: "132374", password: "132374" },
 
-    { username: "152361", password: "152361." },
+    { username: "152361", password: "152361" },
     
-    { username: "963865", password: "963865." },
+    { username: "963865", password: "963865" },
 
-    { username: "160097", password: "160097." },
+    { username: "160097", password: "160097" },
 
-    { username: "155859", password: "155859." },
+    { username: "155859", password: "155859" },
 
     { username: "118687", password: "118687" },
 
