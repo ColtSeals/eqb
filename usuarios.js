@@ -167,45 +167,6 @@ var users = [
 
     { username: "132953", password: "132953" },  // SGT-PM
 
-    { username: "891454", password: "891454" },  // SGT-PM
-
-    { username: "940669", password: "940669" },  // SGT-PM
-
-    { username: "940762", password: "940762" },  // SGT-PM
-
-    { username: "127836", password: "127836" },  // SGT-PM
-
-    { username: "112766", password: "112766" },  // SGT-PM
-
-    { username: "100394", password: "100394" },  // SGT-PM
-
-    { username: "104842", password: "104842" },  // SGT-PM
-
-    { username: "127841", password: "127841" },  // SGT-PM
-
-    { username: "108741", password: "108741" },  // SGT-PM
-
-    { username: "121969", password: "121969" },  // SGT-PM
-
-    { username: "127729", password: "127729" },  // SGT-PM
-
-    { username: "138879", password: "138879" },  // SGT-PM
-
-    { username: "138881", password: "138881" },  // SGT-PM
-
-    { username: "146920", password: "146920" },  // SGT-PM
-
-    { username: "135331", password: "135331" },  // SGT-PM
-
-    { username: "130758", password: "130758" },  // SGT-PM
-
-    { username: "132374", password: "132374" },  // SGT-PM
-
-    { username: "152361", password: "152361" },  // SGT-PM
-    
-    { username: "963865", password: "963865" },  // SGT-PM
-
-    { username: "160097", password: "160097" },  // SGT-PM
 
     { username: "155859", password: "155859" },  // SGT-PM
 
@@ -318,6 +279,46 @@ var users = [
 
 
     
-    // STQ
+    // OFICIAIS
+
+    { username: "891454", password: "891454" },  // CEL-PM LUCENA
+
+    { username: "940669", password: "940669" },  // MAJ-PM ANNE
+
+    { username: "940762", password: "940762" },  // MAJ-PM CELSO ROCHA
+
+    { username: "127836", password: "127836" },  // CAP-PM AUGUSTUS
+
+    { username: "112766", password: "112766" },  // CAP-PM ESCOBAR
+
+    { username: "100394", password: "100394" },  // SGT-PM INAÊ
+
+    { username: "104842", password: "104842" },  // SGT-PM LUIZ
+
+    { username: "127841", password: "127841" },  // SGT-PM MANCINI
+
+    { username: "108741", password: "108741" },  // SGT-PM MASCARENHAS
+
+    { username: "121969", password: "121969" },  // SGT-PM OLEARI
+
+    { username: "127729", password: "127729" },  // SGT-PM RANGEL
+
+    { username: "138879", password: "138879" },  // SGT-PM AUTOMARE
+
+    { username: "138881", password: "138881" },  // SGT-PM ARCOS
+
+    { username: "146920", password: "146920" },  // SGT-PM CORDEIRO
+
+    { username: "135331", password: "135331" },  // SGT-PM CRUZ
+
+    { username: "130758", password: "130758" },  // SGT-PM MARCO AURELIO
+
+    { username: "132374", password: "132374" },  // SGT-PM MENDONÇA
+
+    { username: "152361", password: "152361" },  // SGT-PM REZENDE
+    
+    { username: "963865", password: "963865" },  // SGT-PM UBIRATAN
+
+    { username: "160097", password: "160097" },  // SGT-PM MILTON
 
 ];
