@@ -1084,14 +1084,107 @@ body {
     <a href="#" onclick="toggleSubMenu('submenu-outro')">
         <i class="fa-solid fa-handcuffs" style="margin-right: 10px;"></i>DEJEM
     </a>
-    <!-- Submenu para OUTRO MENU -->
+
+
+
+
+
+  <style>
+    .modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: #fff;
+  width: 50%;
+  margin: 20% auto;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.close {
+  float: left;
+  cursor: pointer;
+}
+
+#idInput {
+  margin: 10px 0;
+  padding: 5px;
+}
+
+#pesquisarBtn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+#pesquisarBtn:hover {
+  background-color: #0056b3;
+}
+</style>
+
+
+<!-- Adicione esta estrutura ao seu HTML, geralmente dentro do body -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeBtn">&times;</span>
+    <h2>Pesquisar DEJEM</h2>
+    <p>Para pesquisar, coloque o ID abaixo e clique em Pesquisar:</p>
+    <input type="text" id="idInput" placeholder="Insira o ID">
+    <button id="pesquisarBtn">Pesquisar</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
     <ul id="submenu-outro" class="submenu">
         <li><a href="http://ms.policiamilitar.sp.gov.br/login.aspx" target="_blank">INSCRIÇÃO</a></li>
-        <li><a href="http://www.copom.intranet.policiamilitar.sp.gov.br/tecnologia/controle_dejem_por_id/" target="_blank">CONSULTA ID</a></li>
+        <li><a href="#" id="openModalBtn">CONSULTA ID</a></li>
         <li><a href="http://www.copom.intranet.policiamilitar.sp.gov.br/tecnologia/dejem_consultar/" target="_blank">ESCALA COPOM</a></li>
 
     </ul>
 </li>
+
+            
+  <script>
+// Adicione este código JavaScript ao seu arquivo
+document.getElementById('openModalBtn').addEventListener('click', function () {
+  document.getElementById('myModal').style.display = 'block';
+});
+
+document.getElementById('closeBtn').addEventListener('click', function () {
+  document.getElementById('myModal').style.display = 'none';
+});
+
+document.getElementById('pesquisarBtn').addEventListener('click', function () {
+  const id = document.getElementById('idInput').value;
+  if (id) {
+    window.open(`https://www.example.com/${id}`, '_blank');
+  }
+});
+
+    
+  </script>
             
 <li>
     <a href="#" onclick="toggleSubMenu('submenu-arma')">
