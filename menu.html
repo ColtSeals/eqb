@@ -1166,8 +1166,17 @@ document.getElementById('openModalBtn').addEventListener('click', function () {
   document.getElementById('myModal').style.display = 'block';
 });
 
+// Fecha o modal ao clicar no botão Fechar
 document.getElementById('closeBtn').addEventListener('click', function () {
   document.getElementById('myModal').style.display = 'none';
+});
+
+// Fecha o modal ao clicar fora dele
+window.addEventListener('click', function (event) {
+  var modal = document.getElementById('myModal');
+  if (event.target == modal) {
+    modal.style.display = 'none';
+  }
 });
 
 document.getElementById('pesquisarBtn').addEventListener('click', function () {
