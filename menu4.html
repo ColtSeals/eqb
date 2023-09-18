@@ -643,11 +643,8 @@ body {
 }
 
 .album-photos > .album-photo {
-  width: 502px; /* Largura desejada */
-  height: 152px; /* Altura desejada */
-  object-fit: cover; /* Ou object-fit: contain; dependendo do seu requisito */
+  width: 50%;
 }
-
 
 .album-right {
   width: 50%;
@@ -1487,32 +1484,19 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
                 </div>
               </div>
             </div>
-		<div class="calendar-month block">
-			  <div id='calendar'></div>
-		</div>
-
-		  <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/main.min.js'></script>
-<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/locales/pt-br.js'></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var calendarEl = document.getElementById('calendar');
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-      initialView: 'dayGridMonth',
-      locale: 'pt-br', // Defina o local desejado
-      events: [
-        {
-          title: 'Winter Wonderland',
-          start: '2023-01-01T07:00:00',
-          end: '2023-01-01T12:00:00',
-        },
-        // Outros eventos aqui...
-      ],
-    });
-    calendar.render();
-  });
-</script>
-
-
+            <div class="event box">
+              <div class="event-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                  class="event-img" />
+                <div class="event-date">
+                  <div class="event-month">Jan</div>
+                  <div class="event-day">01</div>
+                </div>
+                <div class="event-title">Winter Wonderland</div>
+                <div class="event-subtitle">01st Jan, 2019 07:00AM</div>
+              </div>
+            </div>
             <div class="pages box">
               <div class="intro-title">
                 Your pages
@@ -1569,21 +1553,13 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
                 </div>
                 
               </div>
-              <div class="album-content">When the bass drops, so do my problems.
-                <div class="album-photos">
-                  <img
-                    src="https://images.unsplash.com/photo-1508179719682-dbc62681c355?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80"
-                    alt="" class="album-photo" />
-                  <div class="album-right">
-                    <img
-                      src="https://images.unsplash.com/photo-1502872364588-894d7d6ddfab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80"
-                      alt="" class="album-photo" />
-                    <img
-                      src="https://images.unsplash.com/photo-1566737236500-c8ac43014a67?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-                      alt="" class="album-photo" />
-                  </div>
-                </div>
-              </div>
+		<div class="album-content">When the bass drops, so do my problems.
+  			<div class="album-photos">
+   				 <img
+      					src="https://images.unsplash.com/photo-1508179719682-dbc62681c355?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80"
+     				 alt="" class="album-photo" />
+  			</div>
+		</div>
               <div class="album-actions">
                 <div class="intro-title">
                 Supervisores CPA M1
@@ -1622,30 +1598,19 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
                 </div>
               </div>
             </div>
-            <<div class="event box">
-    <div class="event-wrapper">
-        <div id="calendar"></div> <!-- Adicione o calendário aqui -->
-        <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" class="event-img" />
-        <div class="event-date">
-            <div class="event-month">Jan</div>
-            <div class="event-day">01</div>
-        </div>
-        <div class="event-title">Winter Wonderland</div>
-        <div class="event-subtitle">01st Jan, 2019 07:00AM</div>
-    </div>
-</div>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'dayGridMonth'
-        });
-        calendar.render();
-    });
-</script>
-
-
+            <div class="event box">
+              <div class="event-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                  class="event-img" />
+                <div class="event-date">
+                  <div class="event-month">Jan</div>
+                  <div class="event-day">01</div>
+                </div>
+                <div class="event-title">Winter Wonderland</div>
+                <div class="event-subtitle">01st Jan, 2019 07:00AM</div>
+              </div>
+            </div>
             <div class="pages box">
               <div class="intro-title">
                 Your pages
