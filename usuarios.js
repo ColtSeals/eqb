@@ -213,7 +213,59 @@ var users = [
 
     // EQUIPE C
 
+    { username: "100431", password: "100431" },  // SGT-PM DIB
 
+    { username: "965430", password: "965430" },  // SUB-PM RAMOS
+
+    { username: "126755", password: "126755" },  // SGT-PM VANDERSON
+
+    { username: "117910", password: "117910" },  // SGT-PM MARCIA
+
+    { username: "146024", password: "146024" },  // SGT-PM VALMIR
+
+    { username: "127369", password: "127369" },  // SGT-PM JUNIOR
+
+    { username: "144694", password: "144694" },  // SGT-PM ALVES
+
+    { username: "141787", password: "141787" },  // SGT-PM HELMUTH
+
+    { username: "972694", password: "972694" },  // SGT-PM FABIO LIUS
+
+    { username: "963129", password: "963129" },  // SUB-PM JORGE
+
+    { username: "100948", password: "100948" },  // SGT-PM MONTIN
+
+    { username: "967163", password: "967163" },  // SGT-PMSILVANIA
+
+    { username: "100516", password: "100516" },  // SGT-PM ASSIS
+
+    { username: "973804", password: "973804" },  // SGT-PM ABREU
+
+    { username: "111026", password: "111026" },  // SGT-PM TEIXEIRA
+
+    { username: "144743", password: "144743" },  // SGT-PM LUCAS
+
+
+    { username: "951719", password: "951719" },  // CB-PM SANDRA LIMA
+
+    { username: "990200", password: "990200" },  // CB-PM GOMES
+
+    { username: "145061", password: "145061" },  // CB-PM CAROLINA
+
+    { username: "162927", password: "162927" },  // CB-PM CARLOS
+
+    { username: "129295", password: "129295" },  // CB-PM VICAKAS
+        
+    { username: "965307", password: "965307" },  // CB-PM PASSOS
+        
+    { username: "971982", password: "971982" },  // CB-PM ANA LUCIA
+        
+    { username: "142743", password: "142743" },  // CB-PM MATA
+        
+    { username: "162734", password: "162734" },  // CB-PM JONES
+        
+    { username: "161847", password: "161847" },  // CB-PM MARIO
+    
     // EQUIPE D
 
 
