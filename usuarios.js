@@ -122,7 +122,7 @@ var users = [
 
     { username: "111663", password: "111663" },
 
-    { username: "122378", password: "122378." },
+    { username: "122378", password: "122378" },
 
     { username: "982516", password: "982516" },
     
