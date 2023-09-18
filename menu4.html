@@ -1007,12 +1007,21 @@ body {
 <body>
 
 <script>
-        // Verifique se o cookie de autenticação existe
-        if (document.cookie.indexOf("authenticated=true") === -1) {
-            // Redirecione para a página de login (login.html) se não estiver autenticado
-            window.location.href = "login.html";
-        }
+  // Verifique se o cookie de autenticação existe
+  if (document.cookie.indexOf("authenticated=true") === -1) {
+      // Redirecione para a página de login (login.html) se não estiver autenticado
+      window.location.href = "login.html";
+  }
+
+  // Adicione um event listener para a parte "SAIR"
+  document.getElementById('logout-link').addEventListener('click', function() {
+      // Expirar o cookie de autenticação
+      document.cookie = "authenticated=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+      // Redirecionar para a página de login
+      window.location.href = "login.html";
+  });
 </script>
+
 
     
   <!-- partial:index.partial.html -->
@@ -3048,11 +3057,11 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
         
         
         
-        <span class="account-user">COPOM SUP
-          <img src="https://raw.githubusercontent.com/ColtSeals/VDM/main/copomeqpb2.png" alt=""
-            class="account-profile" alt="">
-          <span>▼</span>
-        </span>
+<span id="logout-link" class="account-user">COPOM SUP
+  <img src="https://raw.githubusercontent.com/ColtSeals/VDM/main/copomeqpb2.png" alt="" class="account-profile">
+  <span>SAIR</span>
+</span>
+
 
 
 
