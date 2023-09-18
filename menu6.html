@@ -3166,7 +3166,7 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
           </div>
         </div>
       </div>
-      <div class="side-wrapper contacts" id="telefonesUteis">
+      <div class="side-wrapper contacts">
         <div class="side-title">TELEFONES ÚTEIS</div>
 
 
@@ -3554,8 +3554,13 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
 
 
       </div>
-      div class="search-bar right-search">
-        <input type="text" id="searchInput" placeholder="Pesquisar" onkeyup="searchContacts()" />
+
+
+
+
+	    
+      <div class="search-bar right-search">
+        <<input type="text" id="contact-search" placeholder="Search" />
         <div class="search-bar-svgs">
           <svg stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"
             class="css-i6dzq1" viewBox="0 0 24 24">
@@ -3577,27 +3582,28 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
     <div class="overlay" @click="rightSide = false; leftSide = false" :class="{ 'active': rightSide || leftSide }">
     </div>
   </div>
-  <!-- partial -->
 
 <script>
-        function searchContacts() {
-            var input = document.getElementById('searchInput');
-            var filter = input.value.toUpperCase();
-            var telefonesUteis = document.getElementById('telefonesUteis');
-            var items = telefonesUteis.getElementsByClassName('info-item');
+    document.addEventListener("DOMContentLoaded", function () {
+        const searchInput = document.getElementById("contact-search");
+        const infoItems = document.querySelectorAll(".info-item");
 
-            for (var i = 0; i < items.length; i++) {
-                var item = items[i];
-                var link = item.getElementsByTagName('a')[0];
+        searchInput.addEventListener("input", function () {
+            const searchTerm = searchInput.value.toLowerCase();
 
-                if (link.innerHTML.toUpperCase().indexOf(filter) > -1) {
-                    item.style.display = '';
+            infoItems.forEach(function (item) {
+                const text = item.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    item.style.display = "block";
                 } else {
-                    item.style.display = 'none';
+                    item.style.display = "none";
                 }
-            }
-        }
- </script>	
+            });
+        });
+    });
+</script>
+	
+  <!-- partial -->
 
   <script>
 // Função para atualizar o supervisor com base na equipe selecionada
