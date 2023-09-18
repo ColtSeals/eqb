@@ -78,6 +78,50 @@ var users = [
 
     { username: "124907", password: "124907" },
 
+    { username: "971871", password: "971871" },
+
+    { username: "148724", password: "148724" },
+
+    { username: "953022", password: "953022" },
+
+    { username: "131257", password: "131257" },
+
+    { username: "971908", password: "971908" },
+
+    { username: "128952", password: "128952" },
+
+    { username: "972042", password: "972042" },
+
+    { username: "124982", password: "124982" },
+
+    { username: "117872", password: "117872" },
+
+    { username: "109393", password: "109393" },
+
+    { username: "973016", password: "973016" },
+
+    { username: "965869", password: "965869" },
+
+    { username: "146101", password: "146101" },
+
+    { username: "970163", password: "970163" },
+
+    { username: "129410", password: "129410" },
+
+    { username: "100727", password: "100727" },
+
+    { username: "107500", password: "107500" },
+
+    { username: "126764", password: "126764" },
+
+    { username: "981745", password: "981745" },
+
+    { username: "110466", password: "110466" },
+
+    { username: "111663", password: "111663" },
+
+    { username: "122378", password: "122378." },
+
     { username: "118687", password: "118687" },
 
     // Adicione mais usuários conforme necessário
