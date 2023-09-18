@@ -2782,10 +2782,43 @@ body {
             <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" />
           </svg>
         </button>
-        <span class="account-user">Quan Ha
-          <img src="https://images.genius.com/2326b69829d58232a2521f09333da1b3.1000x1000x1.jpg" alt=""
-            class="account-profile" alt="">
-          <span>▼</span>
+       
+        
+        
+        
+        
+
+
+
+
+<span class="account-user" id="user-display">
+        <!-- O nome do usuário autenticado será exibido aqui -->
+        <img src="https://images.genius.com/2326b69829d58232a2521f09333da1b3.1000x1000x1.jpg" alt="" class="account-profile">
+        <span>▼</span>
+    </span>
+    <a href="logout.html">Sair</a> <!-- Adicione um link para a página de logout, se aplicável -->
+    
+    <script>
+        // Recupere o nome do usuário da página de login
+        var authenticatedUser = "Nome do Usuário"; // Substitua pelo nome do usuário real
+
+        // Atualize o elemento HTML com o nome do usuário
+        var userDisplay = document.getElementById('user-display');
+
+        if (userDisplay) {
+            // Preencha o elemento HTML com o nome do usuário
+            userDisplay.textContent = authenticatedUser;
+        } else {
+            // Manipule a situação em que o elemento não é encontrado
+            console.error("Elemento 'user-display' não encontrado.");
+        }
+    </script>
+
+
+
+
+
+          
         </span>
       </div>
       <div class="side-wrapper stories">
