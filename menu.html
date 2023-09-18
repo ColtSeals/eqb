@@ -1089,48 +1089,51 @@ body {
 
 
 
-  <style>
-    .modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
+<style>
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999; /* Valor alto para garantir que o modal fique acima de outros elementos */
+  }
 
-.modal-content {
-  background-color: #fff;
-  width: 50%;
-  margin: 20% auto;
-  padding: 20px;
-  border-radius: 5px;
-  text-align: center;
-}
+  .modal-content {
+    background-color: #fff;
+    width: 50%;
+    margin: 20% auto;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative; /* Defina a posição como relativa para que o z-index funcione */
+  }
 
-.close {
-  float: left;
-  cursor: pointer;
-}
+  .close {
+    float: left;
+    cursor: pointer;
+  }
 
-#idInput {
-  margin: 10px 0;
-  padding: 5px;
-}
+  #idInput {
+    margin: 10px 0;
+    padding: 5px;
+  }
 
-#pesquisarBtn {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-}
+  #pesquisarBtn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
 
-#pesquisarBtn:hover {
-  background-color: #0056b3;
-}
+  #pesquisarBtn:hover {
+    background-color: #0056b3;
+  }
 </style>
+
 
 
 <!-- Adicione esta estrutura ao seu HTML, geralmente dentro do body -->
