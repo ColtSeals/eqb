@@ -1007,8 +1007,6 @@ body {
 <body>
 
 
-
-
     
   <!-- partial:index.partial.html -->
   <div class="container" x-data="{ rightSide: false, leftSide: false }">
@@ -1548,13 +1546,21 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
                 </div>
                 
               </div>
-		<div class="album-content">When the bass drops, so do my problems.
-  			<div class="album-photos">
-   				 <img
-      					src="https://images.unsplash.com/photo-1508179719682-dbc62681c355?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80"
-     				 alt="" class="album-photo" />
-  			</div>
-		</div>
+              <div class="album-content">When the bass drops, so do my problems.
+                <div class="album-photos">
+                  <img
+                    src="https://images.unsplash.com/photo-1508179719682-dbc62681c355?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80"
+                    alt="" class="album-photo" />
+                  <div class="album-right">
+                    <img
+                      src="https://images.unsplash.com/photo-1502872364588-894d7d6ddfab?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80"
+                      alt="" class="album-photo" />
+                    <img
+                      src="https://images.unsplash.com/photo-1566737236500-c8ac43014a67?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+                      alt="" class="album-photo" />
+                  </div>
+                </div>
+              </div>
               <div class="album-actions">
                 <div class="intro-title">
                 Supervisores CPA M1
@@ -3041,30 +3047,86 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
         </button>
        
         
-        
-        
-<span id="logout-link" class="account-user">COPOM SUP
+
+<style>	      
+.logout-icon {
+  cursor: pointer;
+  color: black;
+  font-size: 20px;
+}
+
+.logout-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(10px);
+}	
+</style>        
+<span id="logout-link" class="account-user">
+  COPOM SUP
   <img src="https://raw.githubusercontent.com/ColtSeals/VDM/main/copomeqpb2.png" alt="" class="account-profile">
-  <span>SAIR</span>
+  <i class="fa-solid fa-right-from-bracket" id="logout-icon"></i>
 </span>
 
 
 
-<script>
-// Verifique se o cookie de autenticação existe
-if (document.cookie.indexOf("authenticated=true") === -1) {
-    // Redirecione para a página de login (login.html) se não estiver autenticado
-    window.location.href = "login.html";
-}
 
-// Adicione um event listener para a parte "SAIR"
-document.getElementById('logout-link').addEventListener('click', function() {
-    // Expirar o cookie de autenticação
-    document.cookie = "authenticated=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
-    // Redirecionar para a página de login
-    window.location.href = "login.html";
+<script>
+  // Verifique se o cookie de autenticação existe
+  if (document.cookie.indexOf("authenticated=true") === -1) {
+      // Redirecione para a página de login (login.html) se não estiver autenticado
+      window.location.href = "login.html";
+  }
+
+  // Adicione um event listener para o ícone de logout
+  document.getElementById('logout-icon').addEventListener('click', function() {
+      // Expirar o cookie de autenticação
+      document.cookie = "authenticated=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+      // Redirecionar para a página de login
+      window.location.href = "login.html";
+  });
+
+
+	
+const logoutButton = document.getElementById("logout-icon");
+
+logoutButton.addEventListener("click", () => {
+  // Mude a cor do botão para branco
+  logoutButton.style.color = "white";
+
+  // Aparece a palavra "sair?"
+  const text = document.createElement("span");
+  text.textContent = "Clique para SAIR!";
+  text.classList.add("logout-text");
+  logoutButton.appendChild(text);
+
+  // Anima o texto
+  text.style.opacity = 0;
+  text.style.transform = "translateY(10px)";
+
+  // Anima o botão
+  logoutButton.style.transition = "color 0.5s, opacity 0.5s, transform 0.5s";
+
+  // Anima o texto
+  text.animate([
+    { opacity: 1 },
+    { opacity: 0.5 },
+    { opacity: 1 },
+    { opacity: 0 },
+  ], {
+    duration: 1s,
+  });
 });
+	
 </script>
+
+
 
 
 
