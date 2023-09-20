@@ -1004,14 +1004,15 @@ body {
 
 
 
- /* CSS para o efeito de zoom padrão */
-  .status-img, .user-img {
+
+ /* CSS para o efeito de zoom */
+  .status-img {
       transition: transform 0.3s ease;
   }
 
-  /* CSS para o efeito de zoom maior */
-  .zoomed-big {
+  .zoomed {
       transform: scale(3.5); /* Aumenta a escala da imagem em 150% */
+      z-index: 30; 
   }
 	  
     
@@ -3981,24 +3982,27 @@ const supervisoresCPAM3 = {
     }
 </script>
 
+
 <script>
   const imagens = document.querySelectorAll(".status-img, .user-img");
 
   imagens.forEach(imagem => {
     imagem.addEventListener("click", function() {
-      imagem.classList.toggle("zoomed-big"); // Adiciona ou remove a classe "zoomed-big" ao clicar
+      imagem.classList.toggle("zoomed"); // Adiciona ou remove a classe "zoomed" ao clicar
     });
   });
 
   document.addEventListener("click", function(event) {
-    if (!imagens.contains(event.target)) {
+    if (!event.target.classList.contains(".status-img, .user-img")) {
       // Se o clique não foi em uma imagem, remove o zoom de todas as imagens
       imagens.forEach(imagem => {
-        imagem.classList.remove("zoomed-big");
+        imagem.classList.remove("zoomed");
       });
     }
   });
 </script>
+
+	
 	
 </body>
 
