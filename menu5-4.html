@@ -3989,15 +3989,15 @@ const supervisoresCPAM3 = {
 
   imagens.forEach(imagem => {
     imagem.addEventListener("click", function() {
-      imagem.classList.toggle("zoomed"); // Adiciona ou remove a classe "zoomed" ao clicar
+      imagem.classList.toggle("zoomed-big"); // Adiciona ou remove a classe "zoomed-big" ao clicar
     });
   });
 
   document.addEventListener("click", function(event) {
-    if (!event.target.classList.contains("status-img") && !event.target.classList.contains("user-img")) {
+    if (!imagens.contains(event.target)) {
       // Se o clique não foi em uma imagem, remove o zoom de todas as imagens
       imagens.forEach(imagem => {
-        imagem.classList.remove("zoomed");
+        imagem.classList.remove("zoomed-big");
       });
     }
   });
