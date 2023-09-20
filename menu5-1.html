@@ -8,6 +8,9 @@
   <link rel="icon" href="https://raw.githubusercontent.com/ColtSeals/VDM/main/copomeqpb2.png" type="image/png">	
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="caminho-para/lightbox2/dist/css/lightbox.min.css" rel="stylesheet">
+  <script src="caminho-para/lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
+
   <style>
     @import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700|Source+Sans+Pro:300,400,600,700&display=swap");
 * {
@@ -1000,27 +1003,6 @@ body {
 
 
  /*MODAL DEJEM */
-
-
-         /* Estilos para a imagem ampliada */
-        .supervisor-popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-        }
-
-        .supervisor-popup img {
-            max-width: 90%;
-            max-height: 90%;
-            border-radius: 50%;
-        }   
     
   </style>
 
@@ -1548,7 +1530,7 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
                 <a class="status-menu-item" id="status-menu-e" href="#" data-status="EQUIPE E">EQUIPE E</a>
               </div>
 <div class="status-main" id="supervisor-info">
-  <img src="https://github.com/ColtSeals/VDM/blob/main/copomeqpb2.png?raw=true" class="status-img">
+  <img src="https://github.com/ColtSeals/VDM/blob/main/copomeqpb2.png?raw=true" class="status-img" class="lightbox">
   <a class="status-menu-item" id="status-menu-name" href="#">CENTRO DE OPERAÇÕES PMESP</a>
 </div>
 
@@ -3578,51 +3560,26 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
 	
   <!-- partial -->
 
-<script>
-<script>
-  
-        // Função para exibir a imagem ampliada
-        function mostrarImagemAmpliada(imagemSrc) {
-            const supervisorPopup = document.createElement("div");
-            supervisorPopup.className = "supervisor-popup";
+  <script>
+// Função para atualizar o supervisor com base na equipe selecionada
+function atualizarSupervisor(timeline, equipe, supervisores) {
+  const statusMenuItems = timeline.querySelectorAll(".status-menu-item");
+  const supervisorImage = timeline.querySelector(".status-img");
+  const supervisorName = timeline.querySelector(".status-menu-item#status-menu-name");
 
-            const imagemAmpliada = document.createElement("img");
-            imagemAmpliada.src = imagemSrc;
+  statusMenuItems.forEach(item => {
+    item.addEventListener("click", function() {
+      const equipeSelecionada = item.getAttribute("data-status");
 
-            supervisorPopup.appendChild(imagemAmpliada);
-            document.body.appendChild(supervisorPopup);
-
-            // Evento para fechar a imagem ampliada quando clicar nela
-            supervisorPopup.addEventListener("click", function () {
-                document.body.removeChild(supervisorPopup);
-            });
-        }
-
-        // Função para atualizar o supervisor com base na equipe selecionada
-        function atualizarSupervisor(timeline, equipe, supervisores) {
-            const statusMenuItems = timeline.querySelectorAll(".status-menu-item");
-            const supervisorImage = timeline.querySelector(".status-img");
-            const supervisorName = timeline.querySelector(".status-menu-item#status-menu-name");
-
-            statusMenuItems.forEach(item => {
-                item.addEventListener("click", function () {
-                    const equipeSelecionada = item.getAttribute("data-status");
-
-                    // Verifica se a equipe selecionada está no objeto de supervisores
-                    if (supervisores[equipeSelecionada]) {
-                        const supervisor = supervisores[equipeSelecionada];
-                        supervisorName.textContent = supervisor.nome;
-                        supervisorImage.src = supervisor.imagem;
-
-                        // Adicione um evento de clique à imagem do supervisor para ampliá-la
-                        supervisorImage.addEventListener("click", function () {
-                            mostrarImagemAmpliada(supervisor.imagem);
-                        });
-                    }
-                });
-            });
-        }
-
+      // Verifica se a equipe selecionada está no objeto de supervisores
+      if (supervisores[equipeSelecionada]) {
+        const supervisor = supervisores[equipeSelecionada];
+        supervisorName.textContent = supervisor.nome;
+        supervisorImage.src = supervisor.imagem;
+      }
+    });
+  });
+}
 
 // Seletor para as timelines
     const timelineCPAM1 = document.querySelector("#timeline-cpa-m1");
