@@ -493,6 +493,7 @@ body {
   margin-right: 15px;
   object-fit: cover;
   object-position: center;
+  z-index: 3;
 }
 
 .username {
@@ -1000,6 +1001,19 @@ body {
 
 
  /*MODAL DEJEM */
+
+
+
+ /* CSS para o efeito de zoom padrão */
+  .status-img, .user-img {
+      transition: transform 0.3s ease;
+  }
+
+  /* CSS para o efeito de zoom maior */
+  .zoomed-big {
+      transform: scale(1.5); /* Aumenta a escala da imagem em 150% */
+  }
+	  
     
   </style>
 
@@ -3966,6 +3980,26 @@ const supervisoresCPAM3 = {
         }
     }
 </script>
+
+<script>
+  const imagens = document.querySelectorAll(".status-img, .user-img");
+
+  imagens.forEach(imagem => {
+    imagem.addEventListener("click", function() {
+      imagem.classList.toggle("zoomed-big"); // Adiciona ou remove a classe "zoomed-big" ao clicar
+    });
+  });
+
+  document.addEventListener("click", function(event) {
+    if (!imagens.contains(event.target)) {
+      // Se o clique não foi em uma imagem, remove o zoom de todas as imagens
+      imagens.forEach(imagem => {
+        imagem.classList.remove("zoomed-big");
+      });
+    }
+  });
+</script>
+	
 </body>
 
 </html>
