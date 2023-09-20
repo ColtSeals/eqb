@@ -1004,16 +1004,16 @@ body {
 
 
 
-
- /* CSS para o efeito de zoom */
+<style>
+  /* CSS para o efeito de zoom */
   .status-img {
       transition: transform 0.3s ease;
   }
 
   .zoomed {
       transform: scale(3.5); /* Aumenta a escala da imagem em 150% */
-      z-index: 30; 
   }
+</style>
 	  
     
   </style>
@@ -3984,7 +3984,7 @@ const supervisoresCPAM3 = {
 
 
 <script>
-  const imagens = document.querySelectorAll(".status-img, .user-img");
+  const imagens = document.querySelectorAll(".status-img");
 
   imagens.forEach(imagem => {
     imagem.addEventListener("click", function() {
@@ -3993,7 +3993,7 @@ const supervisoresCPAM3 = {
   });
 
   document.addEventListener("click", function(event) {
-    if (!event.target.classList.contains(".status-img, .user-img")) {
+    if (!event.target.classList.contains("status-img")) {
       // Se o clique não foi em uma imagem, remove o zoom de todas as imagens
       imagens.forEach(imagem => {
         imagem.classList.remove("zoomed");
