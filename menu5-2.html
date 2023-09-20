@@ -1000,6 +1000,16 @@ body {
 
 
  /*MODAL DEJEM */
+
+
+        /* CSS para o efeito de zoom */
+        .status-img {
+            transition: transform 0.3s ease;
+        }
+
+        .status-img:hover {
+            transform: scale(1.2); /* Aumenta a escala da imagem em 20% */
+        }	  
     
   </style>
 
@@ -3558,44 +3568,40 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
   <!-- partial -->
 
   <script>
+// Função para atualizar o supervisor com base na equipe selecionada
+function atualizarSupervisor(timeline, equipe, supervisores) {
+  const statusMenuItems = timeline.querySelectorAll(".status-menu-item");
+  const supervisorImage = timeline.querySelector(".status-img");
+  const supervisorName = timeline.querySelector(".status-menu-item#status-menu-name");
 
-        // Função para atualizar o supervisor com base na equipe selecionada
-        function atualizarSupervisor(timeline, equipe, supervisores) {
-          const statusMenuItems = timeline.querySelectorAll(".status-menu-item");
-          const supervisorImage = timeline.querySelector(".status-img");
-          const supervisorName = timeline.querySelector(".status-menu-item#status-menu-name");
-        
-          statusMenuItems.forEach(item => {
-            item.addEventListener("click", function() {
-              const equipeSelecionada = item.getAttribute("data-status");
-        
-              // Verifica se a equipe selecionada está no objeto de supervisores
-              if (supervisores[equipeSelecionada]) {
-                const supervisor = supervisores[equipeSelecionada];
-                supervisorName.textContent = supervisor.nome;
-                supervisorImage.src = supervisor.imagem;
-        
-                // Adicione o zoom à imagem do supervisor aqui
-                new Zoom(supervisorImage); // Certifique-se de que sua biblioteca de zoom seja inicializada corretamente aqui
-              }
-            });
-          });
-        }
-        
-        // Seletor para as timelines
-        const timelineCPAM1 = document.querySelector("#timeline-cpa-m1");
-        const timelineCPAM2 = document.querySelector("#timeline-cpa-m2");
-        const timelineCPAM3 = document.querySelector("#timeline-cpa-m3");
-        const timelineCPAM4 = document.querySelector("#timeline-cpa-m4");
-        const timelineCPAM5 = document.querySelector("#timeline-cpa-m5");
-        const timelineCPAM6 = document.querySelector("#timeline-cpa-m6");
-        const timelineCPAM7 = document.querySelector("#timeline-cpa-m7");
-        const timelineCPAM8 = document.querySelector("#timeline-cpa-m8");
-        const timelineCPAM9 = document.querySelector("#timeline-cpa-m9");
-        const timelineCPAM10 = document.querySelector("#timeline-cpa-m10");
-        const timelineCPAM11 = document.querySelector("#timeline-cpa-m11");
-        const timelineCPAM12 = document.querySelector("#timeline-cpa-m12");
-        const timelineESPECIAL = document.querySelector("#timeline-especial");
+  statusMenuItems.forEach(item => {
+    item.addEventListener("click", function() {
+      const equipeSelecionada = item.getAttribute("data-status");
+
+      // Verifica se a equipe selecionada está no objeto de supervisores
+      if (supervisores[equipeSelecionada]) {
+        const supervisor = supervisores[equipeSelecionada];
+        supervisorName.textContent = supervisor.nome;
+        supervisorImage.src = supervisor.imagem;
+      }
+    });
+  });
+}
+
+// Seletor para as timelines
+    const timelineCPAM1 = document.querySelector("#timeline-cpa-m1");
+    const timelineCPAM2 = document.querySelector("#timeline-cpa-m2");
+    const timelineCPAM3 = document.querySelector("#timeline-cpa-m3");
+    const timelineCPAM4 = document.querySelector("#timeline-cpa-m4");
+    const timelineCPAM5 = document.querySelector("#timeline-cpa-m5");
+    const timelineCPAM6 = document.querySelector("#timeline-cpa-m6");
+    const timelineCPAM7 = document.querySelector("#timeline-cpa-m7");
+    const timelineCPAM8 = document.querySelector("#timeline-cpa-m8");
+    const timelineCPAM9 = document.querySelector("#timeline-cpa-m9");
+    const timelineCPAM10 = document.querySelector("#timeline-cpa-m10");
+    const timelineCPAM11 = document.querySelector("#timeline-cpa-m11");
+    const timelineCPAM12 = document.querySelector("#timeline-cpa-m12");
+    const timelineESPECIAL = document.querySelector("#timeline-especial");
     
 
 // Defina os objetos de supervisores para cada timeline
@@ -3924,22 +3930,22 @@ const supervisoresCPAM3 = {
 
 };
 // Chamada para as timelines com os objetos de supervisores relevantes
-        atualizarSupervisor(timelineCPAM1, "EQUIPE A", supervisoresCPAM1);
-        atualizarSupervisor(timelineCPAM2, "EQUIPE A", supervisoresCPAM2);
-        atualizarSupervisor(timelineCPAM3, "EQUIPE A", supervisoresCPAM3);
-        atualizarSupervisor(timelineCPAM4, "EQUIPE A", supervisoresCPAM4);
-        atualizarSupervisor(timelineCPAM5, "EQUIPE A", supervisoresCPAM5);
-        atualizarSupervisor(timelineCPAM6, "EQUIPE A", supervisoresCPAM6);
-        atualizarSupervisor(timelineCPAM7, "EQUIPE A", supervisoresCPAM7);
-        atualizarSupervisor(timelineCPAM8, "EQUIPE A", supervisoresCPAM8);
-        atualizarSupervisor(timelineCPAM9, "EQUIPE A", supervisoresCPAM9);
-        atualizarSupervisor(timelineCPAM10, "EQUIPE A", supervisoresCPAM10);
-        atualizarSupervisor(timelineCPAM11, "EQUIPE A", supervisoresCPAM11);
-        atualizarSupervisor(timelineCPAM12, "EQUIPE A", supervisoresCPAM12);
-        atualizarSupervisor(timelineESPECIAL, "EQUIPE A", supervisoresESPECIAL);
+    atualizarSupervisor(timelineCPAM1, "EQUIPE A", supervisoresCPAM1);
+    atualizarSupervisor(timelineCPAM2, "EQUIPE A", supervisoresCPAM2);
+    atualizarSupervisor(timelineCPAM3, "EQUIPE A", supervisoresCPAM3);
+    atualizarSupervisor(timelineCPAM4, "EQUIPE A", supervisoresCPAM4);
+    atualizarSupervisor(timelineCPAM5, "EQUIPE A", supervisoresCPAM5);
+    atualizarSupervisor(timelineCPAM6, "EQUIPE A", supervisoresCPAM6);
+    atualizarSupervisor(timelineCPAM7, "EQUIPE A", supervisoresCPAM7);
+    atualizarSupervisor(timelineCPAM8, "EQUIPE A", supervisoresCPAM8);
+    atualizarSupervisor(timelineCPAM9, "EQUIPE A", supervisoresCPAM9);
+    atualizarSupervisor(timelineCPAM10, "EQUIPE A", supervisoresCPAM10);
+    atualizarSupervisor(timelineCPAM11, "EQUIPE A", supervisoresCPAM11);
+    atualizarSupervisor(timelineCPAM12, "EQUIPE A", supervisoresCPAM12);
+    atualizarSupervisor(timelineESPECIAL, "EQUIPE A", supervisoresESPECIAL);
+    
 
-	  
-    </script>
+</script>
 <script>
   const profileMenuLinks = document.querySelectorAll(".profile-menu-link");
   
