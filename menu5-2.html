@@ -3981,7 +3981,7 @@ const supervisoresCPAM3 = {
 </script>
 
 <script>
-  const imagens = document.querySelectorAll(".status-img");
+  const imagens = document.querySelectorAll("status-img, user-img");
 
   imagens.forEach(imagem => {
     imagem.addEventListener("click", function() {
@@ -3990,7 +3990,7 @@ const supervisoresCPAM3 = {
   });
 
   document.addEventListener("click", function(event) {
-    if (!event.target.classList.contains("status-img")) {
+    if (!event.target.classList.contains("status-img, user-img")) {
       // Se o clique não foi em uma imagem, remove o zoom de todas as imagens
       imagens.forEach(imagem => {
         imagem.classList.remove("zoomed");
