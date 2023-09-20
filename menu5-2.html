@@ -493,6 +493,7 @@ body {
   margin-right: 15px;
   object-fit: cover;
   object-position: center;
+  z-index: 30;
 }
 
 .username {
@@ -1002,16 +1003,17 @@ body {
  /*MODAL DEJEM */
 
 
+
  /* CSS para o efeito de zoom padrão */
-  .status-img, .user-img {
+  .status-img {
       transition: transform 0.3s ease;
   }
 
-
-  .zoomed {
+  /* CSS para o efeito de zoom maior */
+  .zoomed-big {
       transform: scale(3.5); /* Aumenta a escala da imagem em 150% */
+      z-index: 30;  
   }
-	  
 	  
     
   </style>
@@ -3981,19 +3983,34 @@ const supervisoresCPAM3 = {
 </script>
 
 <script>
-  const imagens = document.querySelectorAll("status-img, user-img");
+  const imagens = document.querySelectorAll(".status-img, .user-img");
 
   imagens.forEach(imagem => {
     imagem.addEventListener("click", function() {
-      imagem.classList.toggle("zoomed"); // Adiciona ou remove a classe "zoomed" ao clicar
+      // Verifique se a imagem já está ampliada
+      const isZoomed = imagem.classList.contains("zoomed-big");
+
+      // Se a imagem já estiver ampliada, remova a classe "zoomed-big"
+      if (isZoomed) {
+        imagem.classList.remove("zoomed-big");
+      } else {
+        // Caso contrário, adicione a classe "zoomed-big" para ampliar a imagem
+        imagens.forEach(outraImagem => {
+          if (outraImagem !== imagem) {
+            outraImagem.classList.remove("zoomed-big");
+          }
+        });
+        imagem.classList.add("zoomed-big");
+      }
     });
   });
 
   document.addEventListener("click", function(event) {
-    if (!event.target.classList.contains("status-img, user-img")) {
-      // Se o clique não foi em uma imagem, remove o zoom de todas as imagens
+    // Verifique se o clique não foi em uma imagem ou em um espaço em branco
+    if (!event.target.closest(".status-img, .user-img")) {
+      // Se o clique não foi em uma imagem, remova o zoom de todas as imagens
       imagens.forEach(imagem => {
-        imagem.classList.remove("zoomed");
+        imagem.classList.remove("zoomed-big");
       });
     }
   });
