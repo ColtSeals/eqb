@@ -1002,14 +1002,14 @@ body {
  /*MODAL DEJEM */
 
 
-        /* CSS para o efeito de zoom */
-        .status-img {
-            transition: transform 0.3s ease;
-        }
+  /* CSS para o efeito de zoom */
+  .status-img {
+      transition: transform 0.3s ease;
+  }
 
-        .status-img:hover {
-            transform: scale(1.2); /* Aumenta a escala da imagem em 20% */
-        }	  
+  .zoomed {
+      transform: scale(1.5); /* Aumenta a escala da imagem em 150% */
+  }  
     
   </style>
 
@@ -3976,6 +3976,17 @@ const supervisoresCPAM3 = {
         }
     }
 </script>
+
+	
+<script>
+  const imagens = document.querySelectorAll(".status-img");
+
+  imagens.forEach(imagem => {
+    imagem.addEventListener("click", function() {
+      imagem.classList.toggle("zoomed"); // Adiciona ou remove a classe "zoomed" ao clicar
+    });
+  });
+</script>	
 </body>
 
 </html>
