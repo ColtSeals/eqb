@@ -396,7 +396,7 @@ function eventCaledarResize($el) {
   // Verifique se o cookie de autenticação existe
   if (document.cookie.indexOf("authenticated=true") === -1) {
       // Redirecione para a página de login (login.html) se não estiver autenticado
-      window.location.href = "login.html";
+      window.location.href = "../login.html";
   }
 
   // Adicione um event listener para o ícone de logout
@@ -404,7 +404,7 @@ function eventCaledarResize($el) {
       // Expirar o cookie de autenticação
       document.cookie = "authenticated=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
       // Redirecionar para a página de login
-      window.location.href = "login.html";
+      window.location.href = "../login.html";
   });
 
 
