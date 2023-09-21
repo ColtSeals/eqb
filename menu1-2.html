@@ -5,6 +5,7 @@
 <head>
   <meta charset="UTF-8">
   <title>SUPERVISOR FERRAMENTAS</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>	
   <link rel="icon" href="https://raw.githubusercontent.com/ColtSeals/VDM/main/copomeqpb2.png" type="image/png">	
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -1004,16 +1005,16 @@ body {
 
 
 
-<style>
-  /* CSS para o efeito de zoom */
-  .status-img {
+ /* CSS para o efeito de zoom padrão */
+  .status-img, .user-img {
       transition: transform 0.3s ease;
   }
 
-  .zoomed {
+  /* CSS para o efeito de zoom maior */
+  .zoomed-big {
       transform: scale(3.5); /* Aumenta a escala da imagem em 150% */
+      z-index: 9999;
   }
-</style>
 	  
     
   </style>
@@ -1410,6 +1411,35 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
 
     </ul>
 </li>
+
+	  
+<li>
+  <a href="#" id="openModalLink">
+    <span>
+      <i class="fa-solid fa-users-rays" style="margin-right: 3px;"></i>ESCALA EQUIPES
+    </span>
+  </a>
+</li>
+		  
+<script>
+  $(document).ready(function() {
+    // Quando o link for clicado
+    $("#openModalLink").click(function(e) {
+      e.preventDefault(); // Impede o link de abrir uma nova página
+
+      // Carrega o conteúdo do modal/escala.html e insere-o em um modal existente
+      $.get("modal/escala.html", function(data) {
+        // Supondo que você tenha um elemento com a classe "modal" onde deseja inserir o conteúdo
+        $(".modal").html(data);
+
+        // Abre o modal (adicione o código para abrir o modal aqui, dependendo da biblioteca/modal que você está usando)
+      });
+    });
+  });
+</script>
+
+		  
+		  
   </ul>
 
 
@@ -3982,27 +4012,24 @@ const supervisoresCPAM3 = {
     }
 </script>
 
-
 <script>
-  const imagens = document.querySelectorAll(".status-img");
+  const imagens = document.querySelectorAll(".status-img, .user-img");
 
   imagens.forEach(imagem => {
     imagem.addEventListener("click", function() {
-      imagem.classList.toggle("zoomed"); // Adiciona ou remove a classe "zoomed" ao clicar
+      imagem.classList.toggle("zoomed-big"); // Adiciona ou remove a classe "zoomed-big" ao clicar
     });
   });
 
   document.addEventListener("click", function(event) {
-    if (!event.target.classList.contains("status-img")) {
+    if (!imagens.contains(event.target)) {
       // Se o clique não foi em uma imagem, remove o zoom de todas as imagens
       imagens.forEach(imagem => {
-        imagem.classList.remove("zoomed");
+        imagem.classList.remove("zoomed-big");
       });
     }
   });
 </script>
-
-	
 	
 </body>
 
