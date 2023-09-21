@@ -1418,13 +1418,20 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
   </a>
 </li>
 
+
 <script>
 // ... Seu código existente ...
 
 $(document).ready(function () {
-  // Botão para abrir o modal
-  $("#openModalBtn").click(function () {
+  // Função para abrir o modal
+  function openModal() {
     $(".cal-modal-container").removeClass("hidden");
+  }
+
+  // Botão para abrir o modal
+  $("#openModalBtn").click(function (e) {
+    e.preventDefault(); // Impede que o link execute o redirecionamento
+    openModal();
   });
 
   // Função para fechar o modal
@@ -1447,6 +1454,7 @@ $(document).ready(function () {
   });
 });
 </script>
+
 
 
 
