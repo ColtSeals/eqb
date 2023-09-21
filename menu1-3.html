@@ -1411,41 +1411,44 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
     </ul>
 
 <li>
-  <a href="#" target="_blank" id="openModalLink">
+  <a href="#" id="openModalBtn">
     <span>
-      <i class="fa-solid fa-users-rays" style="margin-right: 3px;"></i>ESCALA EQUIPES
+      <i class="fa-regular fa-folder-open" style="margin-right: 3px;"></i>Abrir Calendário
     </span>
   </a>
 </li>
 
 <script>
-// Use jQuery para simplificar a seleção de elementos e manipulação do DOM
+// ... Seu código existente ...
+
 $(document).ready(function () {
-  // Seleciona o link
-  var openModalLink = $("#openModalLink");
+  // Botão para abrir o modal
+  $("#openModalBtn").click(function () {
+    $(".cal-modal-container").removeClass("hidden");
+  });
 
-  // Seleciona o modal
-  var modalContainer = $(".cal-modal-container");
+  // Função para fechar o modal
+  function closeModal() {
+    $(".cal-modal-container").addClass("hidden");
+  }
 
-  // Fecha o modal quando o usuário clica fora dele
-  modalContainer.click(function (e) {
-    if (e.target === this) {
-      modalContainer.hide();
+  // Fechar o modal ao clicar fora dele
+  $(document).on("click", function (e) {
+    if ($(e.target).hasClass("cal-modal-container")) {
+      closeModal();
     }
   });
 
-  // Abre o modal quando o link é clicado
-  openModalLink.click(function (e) {
-    e.preventDefault(); // Impede que o link abra uma nova página
-    modalContainer.show();
-  });
-
-  // Fecha o modal quando um botão dentro do modal é clicado
-  $(".close-button").click(function () {
-    modalContainer.hide();
+  // Fechar o modal ao pressionar a tecla ESC
+  $(document).on("keydown", function (e) {
+    if (e.keyCode === 27) {
+      closeModal();
+    }
   });
 });
 </script>
+
+
 
 <style>
   .watermark-container {
@@ -1657,7 +1660,7 @@ body {
 
 </style>
 
-<div class="cal-modal-container">
+<div class="cal-modal-container hidden">
   <div class="cal-modal">
     <h3>ESCALA DE SERVIÇO COPOM</h3>
     <div id="calendar">
@@ -1829,9 +1832,7 @@ function eventCaledarResize($el) {
 
 </script>
 
-
-
-
+		  
 		  
 
 	
