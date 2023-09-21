@@ -2,7 +2,8 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - A Pen by COLTSEALS</title>
+  <title>CALENDARIO ESCALA COPOM</title>
+  <link rel="icon" href="https://raw.githubusercontent.com/ColtSeals/VDM/main/copomeqpb2.png" type="image/png">	
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900" rel="stylesheet">
 <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css'>
 
@@ -387,7 +388,30 @@ function eventCaledarResize($el) {
     flatpickr.set('maxDate', maxDate[1])
     $('.flatpickr-calendar').css('width', '')
   }
-}</script>
+}
+
+</script>
+
+<script>
+  // Verifique se o cookie de autenticação existe
+  if (document.cookie.indexOf("authenticated=true") === -1) {
+      // Redirecione para a página de login (login.html) se não estiver autenticado
+      window.location.href = "login.html";
+  }
+
+  // Adicione um event listener para o ícone de logout
+  document.getElementById('logout-icon').addEventListener('click', function() {
+      // Expirar o cookie de autenticação
+      document.cookie = "authenticated=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+      // Redirecionar para a página de login
+      window.location.href = "login.html";
+  });
+
+
+	
+	
+</script>
+  
 
 </body>
 </html>
