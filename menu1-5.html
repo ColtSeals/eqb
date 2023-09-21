@@ -1425,7 +1425,7 @@ document.getElementById('pesquisarBtn').addEventListener('click', function () {
 $(document).ready(function () {
   // Função para abrir o modal
   function openModal() {
-    $(".cal-modal-container").removeClass("hidden");
+    $(".cal-modal hidden").removeClass("hidden");
   }
 
   // Botão para abrir o modal
@@ -1436,12 +1436,12 @@ $(document).ready(function () {
 
   // Função para fechar o modal
   function closeModal() {
-    $(".cal-modal-container").addClass("hidden");
+    $(".cal-modal hidden").addClass("hidden");
   }
 
   // Fechar o modal ao clicar fora dele
   $(document).on("click", function (e) {
-    if ($(e.target).hasClass("cal-modal-container")) {
+    if ($(e.target).hasClass("cal-modal hidden")) {
       closeModal();
     }
   });
@@ -1486,7 +1486,7 @@ body {
   margin: 0;
 }
 
-.cal-modal-container {
+.cal-modal hidden {
   background: rgba(0, 0, 0, .4);
   display: flex;
   align-items: center;
@@ -1668,8 +1668,8 @@ body {
 
 </style>
 
-<div class="cal-modal-container hidden">
-  <div class="cal-modal">
+
+  <div class="cal-modal hidden">
     <h3>ESCALA DE SERVIÇO COPOM</h3>
     <div id="calendar">
       <div class="placeholder"></div>
