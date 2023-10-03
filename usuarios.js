@@ -84,6 +84,8 @@ var users = [
 // EQUIPE B
     
     { username: "152846", password: "luanque" },  // CB-PM LUANQUE
+  
+  { username: "101870", password: "101870" },  // CB-PM SCARABELLO
 
     { username: "105763", password: "willians" },  // SGT-PM ULLMANN
 
