@@ -94,6 +94,23 @@
        COPOM - Desenvolvido pelo CB-PM 152846-7 Luanque VDM Equipe Bravo
     </div>
 
+    <script>
+      // Verifique se o cookie de autenticação existe
+      if (document.cookie.indexOf("authenticated=true") === -1) {
+          // Redirecione para a página de login (login.html) se não estiver autenticado
+          window.location.href = "login.html";
+      }
+    
+      // Adicione um event listener para o ícone de logout
+      document.getElementById('logout-icon').addEventListener('click', function() {
+          // Expirar o cookie de autenticação
+          document.cookie = "authenticated=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+          // Redirecionar para a página de login
+          window.location.href = "login.html";
+      });
+    
+
+    </script>
     
     <script>
         function openTab(url) {
