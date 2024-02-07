@@ -9,9 +9,7 @@ var users = [
     { username: "143021", password: "110207" },
   
     { username: "usuario", password: "senha" },
-  
-    { username: "101870", password: "170406" },
-  
+    
     { username: "147502", password: "147502" },
 
     { username: "152846", password: "luanque" },  // CB PM LUANQUE
