@@ -73,6 +73,23 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.2.146/pdf.min.js"></script>
     <script src="./js/script.js" defer></script>
+     <script>
+      // Verifique se o cookie de autenticação existe
+      if (document.cookie.indexOf("authenticated=true") === -1) {
+          // Redirecione para a página de login (login.html) se não estiver autenticado
+          window.location.href = "login.html";
+      }
+    
+      // Adicione um event listener para o ícone de logout
+      document.getElementById('logout-icon').addEventListener('click', function() {
+          // Expirar o cookie de autenticação
+          document.cookie = "authenticated=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/";
+          // Redirecionar para a página de login
+          window.location.href = "login.html";
+      });
+    
+
+    </script>
     
 </body>
 
