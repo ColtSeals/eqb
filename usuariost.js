@@ -4,6 +4,9 @@ var users = [
 
 // EQUIPE B VDM
 
+    
+    { username: "192543", password: "192543" },  // SD PM BOROTO
+
     { username: "153026", password: "frederico" },
   
     { username: "143021", password: "110207" },
@@ -20,7 +23,6 @@ var users = [
 
     { username: "106864", password: "106864" },  // SD PM FREDERICO
 
-    { username: "192543", password: "192543" },  // SD PM BOROTO
 
 
 ];
