@@ -72,6 +72,7 @@
     </div>
     <h3>Resultado:</h3>
     <pre id="output" class="pre-scrollable bg-light p-3"></pre>
+    <button class="btn btn-secondary mt-3" onclick="copyToClipboard()">Copiar</button>
 </div>
 <div class="footer">
     <p>© 2024 Desenvolvido por Cb PM Luanque | Cb PM Jefferson - VDM EQUIPE BRAVO</p>
@@ -96,6 +97,16 @@
         } else {
             alert('Por favor, selecione um arquivo JSON para processar.');
         }
+    }
+
+    function copyToClipboard() {
+        const output = document.getElementById('output');
+        const text = output.innerText;
+        navigator.clipboard.writeText(text).then(() => {
+            alert('Texto copiado para a área de transferência!');
+        }).catch(err => {
+            console.error('Falha ao copiar texto: ', err);
+        });
     }
 </script>
 </body>
