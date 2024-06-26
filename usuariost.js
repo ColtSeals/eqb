@@ -22,6 +22,8 @@ var users = [
     { username: "101870", password: "170406" },  // CB PM SCARABELLO
 
     { username: "106864", password: "106864" },  // SD PM FREDERICO
+    
+    { username: "146101", password: "146101" },  // CB PM RENATA LILAS
 
 
 
