@@ -7,6 +7,8 @@ var users = [
     
     { username: "192543", password: "192543" },  // SD PM BOROTO
 
+    { username: "161138", password: "161138" },  // CB PM WILSON 38M
+
     { username: "153026", password: "frederico" },
   
     { username: "143021", password: "110207" },
@@ -25,7 +27,8 @@ var users = [
     
     { username: "146101", password: "146101" },  // CB PM RENATA LILAS
 
-     { username: "161138", password: "161138" },  // CB PM WILSON 38M
+    
+     
 
 
 
