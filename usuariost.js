@@ -25,6 +25,8 @@ var users = [
     
     { username: "146101", password: "146101" },  // CB PM RENATA LILAS
 
+     { username: "161138", password: "161138" },  // CB PM WILSON 38M
+
 
 
 ];
