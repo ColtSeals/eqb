@@ -94,6 +94,8 @@
         .input-container {
             display: flex;
             margin-top: 20px;
+            flex-direction: column;
+            align-items: center;
         }
 
         .input-container input {
@@ -104,7 +106,20 @@
         .input-container button {
             padding: 10px;
             font-size: 16px;
-            margin-left: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .preset-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .preset-buttons button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px;
             cursor: pointer;
         }
 
@@ -153,7 +168,6 @@
     <div class="container">
         <div class="banner" id="banner">
             <div class="box align">
-                <!--every difficulty up has another skull, starting with normal, with 0, ending with death sentence, 6-->
                 <marquee behavior="scroll" direction="left" scrollamount="9" id="marquee">Digite a frase no campo abaixo.</marquee>
             </div>
         </div>
@@ -166,6 +180,12 @@
     <div class="input-container">
         <input type="text" id="messageInput" placeholder="Digite sua mensagem">
         <button onclick="updateMarquee()">Enviar</button>
+    </div>
+    <div class="preset-buttons">
+        <button onclick="setPresetMessage('É EXPRESSAMENTE PROIBIDO PORTAR APARELHO DE TELEFONIA MÓVEL “CELULAR” NO AMBIENTE DE TRABALHO.')">Frase 01</button>
+        <button onclick="setPresetMessage('NÃO TENSIONE O CABO DO HEADSET. ESSA PRÁTICA DANIFICA O EQUIPAMENTO.')">Frase 02</button>
+        <button onclick="setPresetMessage('É PROIBIDO ALIMENTAR-SE DURANTE A EXECUÇÃO DO SERVIÇO. ESSA PRÁTICA PREJUDICA AS COMUNICAÇÕES NA REDE DE RÁDIO.')">Frase 03</button>
+        <button onclick="setPresetMessage('NÃO É PERMITIDO JORNAIS, REVISTAS OU QUAISQUER OUTROS TIPOS DE MATERIAIS ALHEIOS AO SERVIÇO, DURANTE O DESENVOLVIMENTO DOS TRABALHOS NAS CABINES.')">Frase 04</button>
     </div>
 
     <script>
@@ -194,6 +214,11 @@
                 marquee.textContent = message;
                 localStorage.setItem('marqueeMessage', message);
             }
+        }
+
+        function setPresetMessage(message) {
+            marquee.textContent = message;
+            localStorage.setItem('marqueeMessage', message);
         }
 
         start();
