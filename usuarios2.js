@@ -8,6 +8,8 @@ var users = [
     { username: "192543", password: "192543" },  // SD PM BOROTO
 
     { username: "153026", password: "frederico" },
+
+    { username: "123917", password: "123917" },
   
     { username: "143021", password: "110207" },
   
